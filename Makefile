@@ -32,6 +32,9 @@ cleanpo:
 install:
 	install -d -m 755 $(DESTDIR)/sbin
 	install -m 755 src/liloconfig $(DESTDIR)/sbin/
+	install -d -m 755 $(DESTDIR)/var/log/setup
+	install -m 755 src/setup.liloconfig $(DESTDIR)/var/log/setup/
+	install -m 644 src/text.lilohelp $(DESTDIR)/var/log/setup/
 	for i in `ls po/*.mo`; do \
 		install -d -m 755 \
 		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES \
