@@ -272,8 +272,7 @@ bootdisk, you'll probably want to enter the same ones here.  Most \
 systems won't require any extra parameters.  If you want to use \
 hibernation, please add a resume option for your swap partition. For \
 example: 'resume=/dev/sda3' if your swap partition is /dev/sda3. If you \
-don't need any, just hit ENTER to continue.\n\
-"`" 14 80 2> $TMP/reply
+don't need any, just hit ENTER to continue."`" 14 80 2> $TMP/reply
  RETVAL=$?
  return $RETVAL
 }

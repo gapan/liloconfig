@@ -14,15 +14,15 @@ msgstr ""
 "Project-Id-Version: salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-22 21:58+0200\n"
-"PO-Revision-Date: 2016-03-21 23:23+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2016-03-22 23:14+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #
 # File: 32-liloconfig, line: 37
@@ -85,9 +85,9 @@ msgid ""
 "Would you like to use a boot screen with the Salix logo against a black "
 "background?  If you answer no here, the standard LILO menu will be used.\n"
 msgstr ""
-"Θα θέλατε να χρησιμοποιήσετε μια οθόνη εκκίνησης με το λογότυπο του "
-"Salix πάνω σε ένα μαύρο φόντο; Αν εδώ απαντήσετε όχι, τότε θα "
-"χρησιμοποιηθεί το κλασικό μενού  του LILO.\n"
+"Θα θέλατε να χρησιμοποιήσετε μια οθόνη εκκίνησης με το λογότυπο του Salix "
+"πάνω σε ένα μαύρο φόντο; Αν εδώ απαντήσετε όχι, τότε θα χρησιμοποιηθεί το "
+"κλασικό μενού  του LILO.\n"
 
 #
 # File: 32-liloconfig, line: 177
@@ -100,7 +100,6 @@ msgstr "ΡΥΘΜΙΣΤΕ ΤΟ LILO ΓΙΑ ΝΑ ΧΡΗΣΙΜΟΠΟΙΕΙ ΤΗΝ �
 # File: 32-liloconfig, line: 179
 # File: 64-liloconfig, line: 179
 #: src/liloconfig:189
-#, fuzzy
 msgid ""
 "Looking at /proc/devices, it seems your kernel has support for the Linux "
 "frame buffer console.  If we enable this in /etc/lilo.conf, it will allow "
@@ -113,11 +112,10 @@ msgstr ""
 "Γίνεται αναζήτηση για συσκευές /proc/devices, μοιάζει πως ο πυρήνας σας έχει "
 "υποστήριξη για κονσόλα VESA frame buffer.  Αν αυτό το ενεργοποιήσουμε στο /"
 "etc/lilo.conf, θα επιτρέψει περισσότερες γραμμές και στήλες κειμένου στην "
-"οθόνη και θα σας δώσει ένα cool λογότυπο κατά τη φάση εκκίνησης. Εν πάση "
-"περιπτώσει, η κονσόλα κειμένου frame buffer είναι πιο αργή από την κλασική "
-"κονσόλα κειμένου. Επιπλέον, δεν υποστηρίζουν όλες οι κάρτες γραφικών και οι "
-"οθόνες όλους αυτούς τους τρόπους video, και μπορεί να επέλθει σύγχυση "
-"ανάμεσα σε κάποιους οδηγούς για τον X.  Θα θέλατε να χρησιμοποιήσετε την "
+"οθόνη και θα σας δώσει ένα ωραίο λογότυπο κατά την εκκίνησης. Ωστώσο, η "
+"κονσόλα κειμένου frame buffer είναι πιο αργή από την κλασική κονσόλα "
+"κειμένου. Επιπλέον, δεν υποστηρίζουν όλες οι κάρτες γραφικών και οι οθόνες "
+"όλους αυτούς τους τρόπους εμφάνισης video. Θα θέλατε να χρησιμοποιήσετε την "
 "κονσόλα frame buffer, ή την κλασική κονσόλα Linux;"
 
 #
@@ -152,31 +150,27 @@ msgstr "Κονσόλα Frame buffer, 1024x768x64k"
 # File: 32-liloconfig, line: 190
 # File: 64-liloconfig, line: 190
 #: src/liloconfig:200
-#, fuzzy
 msgid "Frame buffer console, 1280x1024x64k"
-msgstr "Κονσόλα Frame buffer, 800x600x64k"
+msgstr "Κονσόλα Frame buffer, 1280x1024x64k"
 
 #
 # File: 32-liloconfig, line: 190
 # File: 64-liloconfig, line: 190
 #: src/liloconfig:201
-#, fuzzy
 msgid "Frame buffer console, 1600x1200x64k"
-msgstr "Κονσόλα Frame buffer, 800x600x64k"
+msgstr "Κονσόλα Frame buffer, 1600x1200x64k"
 
 #
 # File: 32-liloconfig, line: 264
 # File: 64-liloconfig, line: 264
 #: src/liloconfig:268
-#, fuzzy
 msgid "OPTIONAL LILO append="
-msgstr "ΠΡΟΑΙΡΕΤΙΚΗ προσάρτηση του LILO append=<kernel parameters> LINE"
+msgstr "ΠΡΟΑΙΡΕΤΙΚΟ LILO append="
 
 #
 # File: 32-liloconfig, line: 265
 # File: 64-liloconfig, line: 265
 #: src/liloconfig:269
-#, fuzzy
 msgid ""
 "Some systems might require extra parameters to be passed to the kernel. If "
 "you needed to pass parameters to the kernel when you booted the Salix "
@@ -186,12 +180,14 @@ msgid ""
 "if your swap partition is /dev/sda3. If you don't need any, just hit ENTER "
 "to continue.\\n"
 msgstr ""
-"Μερικά συστήματα απαιτούν να παρέχονται επιπλέον παράμετροι στον πυρήνα. Αν "
-"χρειάσθηκε να δώσετε κάποιες παραμέτρους στον πυρήνα όταν κάνατε την "
-"εκκίνηση του δίσκου εκκίνηση/ bootdisk του Salix, μάλλον θα θέλετε να "
-"βάλετε τους ίδιους και εδώ. Τα περισσότερα συστήματα δεν θα απαιτήσουν "
-"επιπλέον παραμέτρους. Αν δεν χρειάζεστε τίποτε από αυτά, απλώς πατήστε ENTER "
-"για να συνεχίσετε.\n"
+"Σε μερικά συστήματα ενδέχεται να απαιτούνται επιπλέον παράμετροι για τον "
+"πυρήνα. Αν χρειάσθηκε να δώσετε κάποιες παραμέτρους στον πυρήνα όταν κάνατε "
+"την εκκίνηση του δίσκου εκκίνησης του Salix, μάλλον θα θέλετε να βάλετε τους "
+"ίδιους και εδώ. Τα περισσότερα συστήματα δεν θα απαιτήσουν επιπλέον "
+"παραμέτρους. Αν θέλετε να έχετε τη δυνατότητα Αδρανοποίησης του συστήματος, "
+"προσθέστε μια επιλογή resume για την κατάτμηση swap. Για παράδειγμα: "
+"'resumt=/dev/sda3', αν η κατάτμηση swap είναι η /dev/sda3. Αν δεν χρειάζεστε "
+"τίποτε από αυτά, απλώς πατήστε ENTER για να συνεχίσετε.\\n"
 
 #
 # File: 32-liloconfig, line: 305
