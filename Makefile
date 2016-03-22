@@ -24,3 +24,13 @@ clean:
 .PHONY: cleanpo
 cleanpo:
 	find po/ -name '*.po' -print0 | while read -d '' -r file; do msgattrib --output-file="$$file" --no-obsolete "$$file"; done
+
+.PHONY: install
+install:
+	for i in `ls po/*.mo`; do \
+		install -d -m 755 \
+		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES \
+		2> /dev/null; \
+		install -m 644 $$i \
+		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES/liloconfig.mo; \
+	done; \
