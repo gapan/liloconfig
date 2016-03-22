@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[salix.liloconfig]
+file_filter = po/<lang>.po
+source_file = po/liloconfig.pot
+source_lang = en
+
