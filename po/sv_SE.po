@@ -1,0 +1,812 @@
+#
+# This file is put in the public domain.
+#
+# Translators:
+# Didier Spaier <didier@slint.fr>, 2014.
+# Ingemar Karlsson <ingemar@ingk.se>, 2014,2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: salix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-22 21:58+0200\n"
+"PO-Revision-Date: 2016-03-22 00:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"language/sv/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#
+# File: 32-liloconfig, line: 37
+# File: 64-liloconfig, line: 37
+#: src/liloconfig:47
+msgid "UEFI FIRMWARE DETECTED"
+msgstr "UEFI FIRMWARE UPPTÄCKT"
+
+#
+# File: 32-liloconfig, line: 38
+# File: 64-liloconfig, line: 38
+#: src/liloconfig:48
+msgid "LILO (Linux Loader) installation"
+msgstr "LILO (Linux Loader) installation"
+
+#
+# File: 32-liloconfig, line: 40
+# File: 64-liloconfig, line: 40
+#: src/liloconfig:50
+msgid ""
+"Since LILO (the traditional Linux Loader) does not work with machines "
+"running UEFI firmware (except in Legacy BIOS mode), you probably do not need "
+"to install it.  Instead, you'll need ELILO, which is a version of LILO "
+"designed to work with EFI/UEFI systems."
+msgstr ""
+"Eftersom LILO (den traditionella Linux Loader) inte fungerar med maskiner "
+"som kör UEFI firmware (förutom i Legacy BIOS-läget), har du förmodligen inte "
+"behöver installera det. Istället behöver du ELILO, som är en version av LILO "
+"utformad för att fungera med EFI/UEFI-system."
+
+#
+# File: 32-liloconfig, line: 45
+# File: 64-liloconfig, line: 45
+#: src/liloconfig:55
+msgid "Skip installing LILO and proceed to ELILO installation"
+msgstr "Hoppa över installation av LILO och fortsätt med elilo installation"
+
+#
+# File: 32-liloconfig, line: 46
+# File: 64-liloconfig, line: 46
+#: src/liloconfig:56
+msgid "Install LILO anyway"
+msgstr "Installera LILO ändå"
+
+# File: 32-liloconfig, line: 145
+# File: 64-liloconfig, line: 145
+#: src/liloconfig:155
+msgid "OPTIONAL SALIX LOGO BOOT SCREEN"
+msgstr "TILLVAL SALIX STARTSKÄRMSLOGO"
+
+#
+# File: 32-liloconfig, line: 147
+# File: 64-liloconfig, line: 147
+#: src/liloconfig:157
+msgid ""
+"Would you like to use a boot screen with the Salix logo against a black "
+"background?  If you answer no here, the standard LILO menu will be used.\n"
+msgstr ""
+"Vill du använda en startskärm med Salix-logotypen mot en svart bakgrund? "
+"Om du svarar nej här, kommer standard LILO meny att användas.\n"
+
+#
+# File: 32-liloconfig, line: 177
+# File: 64-liloconfig, line: 177
+#: src/liloconfig:187
+msgid "CONFIGURE LILO TO USE FRAME BUFFER CONSOLE?"
+msgstr "KONFIGURERA LILO ATT ANVÄNDA FRAME BUFFER KONSOL?"
+
+#
+# File: 32-liloconfig, line: 179
+# File: 64-liloconfig, line: 179
+#: src/liloconfig:189
+#, fuzzy
+msgid ""
+"Looking at /proc/devices, it seems your kernel has support for the Linux "
+"frame buffer console.  If we enable this in /etc/lilo.conf, it will allow "
+"more rows and columns of text on the screen and give you a cool penguin logo "
+"at boot time.  However, the frame buffer text console is slower than a "
+"standard text console.  In addition, not every video card or monitor "
+"supports all of these video modes.  Would you like to use the frame buffer "
+"console, or the standard Linux console?"
+msgstr ""
+"Om man tittar på /proc/devices, verkar det som din kärna har stöd för VESA "
+"frame buffer konsol. Om vi aktiverar det här i /etc/lilo.conf, kommer det "
+"att låta fler rader och kolumner med text på skärmen och ger dig en cool "
+"pingvin logotyp vid uppstart. Dock är bildrutebuffert-textkonsollen "
+"långsammare än en vanlig textkonsol. Dessutom stöder inte alla grafikkort "
+"eller bildskärmar alla dessa videolägen, och vissa X-drivrutiner kan "
+"förvillas av dem. Vill du använda rambufferten konsolen, eller standard "
+"Linux-konsollen?"
+
+#
+# File: 32-liloconfig, line: 187
+# File: 64-liloconfig, line: 187
+#: src/liloconfig:196
+msgid "Use the standard Linux console (the safe choice)"
+msgstr "Använd standard Linux konsol (säkert val)"
+
+#
+# File: 32-liloconfig, line: 189
+# File: 64-liloconfig, line: 189
+#: src/liloconfig:197
+msgid "Frame buffer console, 640x480x64k"
+msgstr "Frame buffer konsol, 640x480x64k"
+
+#
+# File: 32-liloconfig, line: 190
+# File: 64-liloconfig, line: 190
+#: src/liloconfig:198
+msgid "Frame buffer console, 800x600x64k"
+msgstr "Frame buffer konsol, 800x600x64k"
+
+#
+# File: 32-liloconfig, line: 191
+# File: 64-liloconfig, line: 191
+#: src/liloconfig:199
+msgid "Frame buffer console, 1024x768x64k"
+msgstr "Frame buffer konsol, 1024x768x64k"
+
+#
+# File: 32-liloconfig, line: 190
+# File: 64-liloconfig, line: 190
+#: src/liloconfig:200
+#, fuzzy
+msgid "Frame buffer console, 1280x1024x64k"
+msgstr "Frame buffer konsol, 800x600x64k"
+
+#
+# File: 32-liloconfig, line: 190
+# File: 64-liloconfig, line: 190
+#: src/liloconfig:201
+#, fuzzy
+msgid "Frame buffer console, 1600x1200x64k"
+msgstr "Frame buffer konsol, 800x600x64k"
+
+#
+# File: 32-liloconfig, line: 264
+# File: 64-liloconfig, line: 264
+#: src/liloconfig:268
+#, fuzzy
+msgid "OPTIONAL LILO append="
+msgstr "EXTRA LILO append=<kärnparametrar> RAD"
+
+#
+# File: 32-liloconfig, line: 265
+# File: 64-liloconfig, line: 265
+#: src/liloconfig:269
+#, fuzzy
+msgid ""
+"Some systems might require extra parameters to be passed to the kernel. If "
+"you needed to pass parameters to the kernel when you booted the Salix "
+"bootdisk, you'll probably want to enter the same ones here.  Most systems "
+"won't require any extra parameters.  If you want to use hibernation, please "
+"add a resume option for your swap partition. For example: 'resume=/dev/sda3' "
+"if your swap partition is /dev/sda3. If you don't need any, just hit ENTER "
+"to continue.\\n"
+msgstr ""
+"Vissa system kan kräva ytterligare parametrar som ska skickas till kärnan. "
+"Om du behövde skicka parametrar till kärnan när du startat upp Salix "
+"bootdisk, vill du förmodligen ange dessa här. De flesta system kommer inte "
+"att behöva några extra parametrar. Om du inte behöver någon, tryck bara "
+"ENTER för att fortsätta.\n"
+
+#
+# File: 32-liloconfig, line: 305
+# File: 64-liloconfig, line: 305
+#: src/liloconfig:297
+msgid "OS/2 BOOT MANAGER FOUND"
+msgstr "OS/2 BOOT MANAGER HITTAD"
+
+#
+# File: 32-liloconfig, line: 306
+# File: 64-liloconfig, line: 306
+#: src/liloconfig:298
+msgid ""
+"Your system appears to have Boot Manager, a boot menu system provided with "
+"OS/2 and Partition Magic.  If you like, we can install a very simple LILO "
+"boot block at the start of your Linux partition.  Then, you can add the "
+"partition to the Boot Manager menu, and you'll be able to use Boot Manager "
+"to boot Linux.  Would you like to install LILO in a Boot Manager compatible "
+"way?"
+msgstr ""
+"Ditt system verkar ha Boot Manager, en startmeny system försett med OS/2 och "
+"Partition Magic. Om du vill kan vi installera en mycket enkel LILO boot-"
+"block i början av din Linux-partition. Sedan kan du lägga till partitionen "
+"till Boot Manager-menyn, och du kommer att kunna använda Boot Manager för "
+"att starta upp Linux. Vill du installera LILO på en Boot Manager kompatibelt "
+"sätt?"
+
+#
+# File: 32-liloconfig, line: 374
+# File: 64-liloconfig, line: 374
+#: src/liloconfig:352
+#, sh-format
+msgid "SELECT LILO DESTINATION"
+msgstr "VÄLJ LILO DESTINATION"
+
+#
+# File: 32-liloconfig, line: 375
+# File: 64-liloconfig, line: 375
+#: src/liloconfig:353
+msgid ""
+"LILO can be installed to a variety of places:\n"
+"\n"
+"  1. The superblock of your root Linux partition.  (which could      be made "
+"the bootable partition with Windows or Linux fdisk, or      booted with a "
+"program like OS/2 Boot Manager)\n"
+"  2. A formatted floppy disk.\n"
+"  3. The Master Boot Record of your first hard drive.\n"
+"\n"
+"Options 1 and 2 are the safest, but option 1 does require a little extra "
+"work later (setting the partition bootable with fdisk). Which option would "
+"you like?"
+msgstr ""
+"LILO kan installeras på en mängd olika ställen:\n"
+"\n"
+"  1. superblock på din root Linux-partition. (partition som kan göras\n"
+"     startbar med Windows eller Linux fdisk, eller startas upp med ett\n"
+"     program som OS/2 Boot Manager)\n"
+"  2. En formaterad diskett.\n"
+"  3. Master Boot Record på din första hårddisk.\n"
+"\n"
+"Alternativ 1 och 2 är det säkraste, men alternativ 1 kräver lite extra "
+"arbete senare (inställning partitionen startbar med fdisk). Vilket "
+"alternativ vill du ha?"
+
+#
+# File: 32-liloconfig, line: 387
+# File: 32-liloconfig, line: 860
+# File: 64-liloconfig, line: 387
+# File: 64-liloconfig, line: 860
+#: src/liloconfig:365 src/liloconfig:818
+msgid "Install to superblock (not for use with XFS)"
+msgstr "Installera till superblock (ej för användning med XFS)"
+
+#
+# File: 32-liloconfig, line: 388
+# File: 64-liloconfig, line: 388
+#: src/liloconfig:366
+msgid "Install to a formatted floppy in /dev/fd0 (A:)"
+msgstr "Installera till en formaterad diskett i /dev/fd0 (A:)"
+
+#
+# File: 32-liloconfig, line: 389
+# File: 64-liloconfig, line: 389
+#: src/liloconfig:367
+msgid "Install to Master Boot Record"
+msgstr "Installera till Master Boot Record"
+
+#
+# File: 32-liloconfig, line: 594
+# File: 64-liloconfig, line: 594
+#: src/liloconfig:577
+#, sh-format
+msgid "I can't find a device named $ArG1 !"
+msgstr "Jag kan inte hitta en enhet som heter $ArG1 !"
+
+#
+# File: 32-liloconfig, line: 598
+# File: 64-liloconfig, line: 598
+#: src/liloconfig:581
+msgid "Are you sure you want to use this device name "
+msgstr "Är du säker på att du vill använda detta enhetesnamn"
+
+#
+# File: 32-liloconfig, line: 612
+# File: 64-liloconfig, line: 612
+#: src/liloconfig:595
+msgid "DEVICE FILE NOT FOUND"
+msgstr "ENHETSFIL HITTADES INTE"
+
+#
+# File: 32-liloconfig, line: 612
+# File: 64-liloconfig, line: 612
+#: src/liloconfig:595
+#, sh-format
+msgid ""
+"I can't find a device named $ArG1. Are you sure you want to use this device "
+"name?"
+msgstr ""
+"Jag kan inte hitta en enhet som heter $ArG1. Är du säker på att du vill "
+"använda detta enhetsnamn?"
+
+#
+# File: 32-liloconfig, line: 647
+# File: 64-liloconfig, line: 647
+#: src/liloconfig:605
+msgid "Installing the Linux Loader..."
+msgstr "Installerar Linux Loader..."
+
+#
+# File: 32-liloconfig, line: 674
+# File: 64-liloconfig, line: 674
+#: src/liloconfig:632
+#, sh-format
+msgid ""
+"Sorry, but the attempt to install LILO has returned an error, so LILO has "
+"not been correctly installed.  You'll have to use a bootdisk to start your "
+"machine instead.  It should still be possible to get LILO working by editing "
+"the /etc/lilo.conf and reinstalling LILO manually.  See the LILO man page "
+"and documentation in $LILODOCDIR for more help.  The error message may be "
+"seen above."
+msgstr ""
+"Tyvärr, men försöket att installera LILO har returnerat ett fel, så LILO har "
+"inte installerats korrekt. Du måste använda en startdiskett för att starta "
+"maskinen istället. Det bör fortfarande vara möjligt att få LILO att fungera "
+"genom att redigera /etc/lilo.conf och installera LILO manuellt. Se LILO "
+"manualsidan och dokumentation i $LILODOCDIR för mer hjälp. Felmeddelandet "
+"kan ses ovan."
+
+#
+# File: 32-liloconfig, line: 715
+# File: 64-liloconfig, line: 715
+#: src/liloconfig:672
+#, sh-format
+msgid ""
+"LILO INSTALL ERROR # $SUCCESS\n"
+"\n"
+"Sorry, but the attempt to install LILO has returned an error, so LILO has "
+"not been correctly installed.  You'll have to use a bootdisk to start your "
+"machine instead.  It should still be possible to get LILO working by editing "
+"the /etc/lilo.conf and reinstalling LILO manually. See the LILO man page and "
+"documentation in $LILODOCDIR for more help."
+msgstr ""
+"LILO INSTALLATIONs FEL # $SUCCESS\n"
+"\n"
+"Tyvärr, men försöket att installera LILO har returnerat ett fel, så LILO har "
+"inte installerats korrekt. Du måste använda en startdiskett för att starta "
+"maskinen istället. Det bör fortfarande vara möjligt att få LILO att fungera "
+"genom att redigera /etc/lilo.conf och installera LILO manuellt. Se LILO "
+"manualsidan och dokumentation i $LILODOCDIR för mer hjälp."
+
+#
+# File: 32-liloconfig, line: 777
+# File: 64-liloconfig, line: 777
+#: src/liloconfig:734
+msgid "SKIP LILO CONFIGURATION? (RECOMMENDED)"
+msgstr "HOPPA ÖVER LILO KONFIGURATION? (REKOMMENDERAS)"
+
+#
+# File: 32-liloconfig, line: 777
+# File: 64-liloconfig, line: 777
+#: src/liloconfig:735
+msgid ""
+"Since you are installing to a FAT partition, it's suggested that you do not "
+"configure LILO at this time.  (Instead, use your bootdisk.  For booting off "
+"the hard drive from MS-DOS, you can use Loadlin.  You'll find Loadlin on "
+"your hard drive in \\LINUX\\ROOT) Skip LILO configuration (highly "
+"recommended)?"
+msgstr ""
+"Eftersom du installerar på en FAT-partition, föreslås det att du inte "
+"konfigurerar LILO just nu. (Använd i stället din startdiskett. För att "
+"starta upp från hårddisken från MS-DOS kan du använda Loadlin. Du hittar "
+"Loadlin på din hårddisk i \\LINUX\\ROOT) Hoppa över LILO konfiguration "
+"(rekommenderas)?"
+
+#
+# File: 32-liloconfig, line: 789
+# File: 64-liloconfig, line: 789
+#: src/liloconfig:751
+msgid "INSTALL LILO"
+msgstr "INSTALLERA LILO"
+
+#
+# File: 32-liloconfig, line: 789
+# File: 64-liloconfig, line: 789
+#: src/liloconfig:752
+msgid ""
+"LILO (Linux Loader) is a generic boot loader.  There's a simple installation "
+"which tries to automatically set up LILO to boot Linux (also Windows if "
+"found).  For more advanced users, the expert option offers more control over "
+"the installation process.  Since LILO does not work in all cases (and can "
+"damage partitions if incorrectly installed), there's the third (safe) "
+"option, which is to skip installing LILO for now.  You can always install it "
+"later with the 'liloconfig' command.  Which option would you like?"
+msgstr ""
+"LILO (Linux Loader) är en generell starthanteraren. Det finns en enkel "
+"installation som automatiskt försöker ställa in LILO att starta upp Linux "
+"(även Windows om upptäckt). För mer avancerade användare, ger expert "
+"alternativet mer kontroll över installationen. Eftersom LILO inte fungerar i "
+"alla fall (och kan skada partitioner om felaktigt installerad) finns det ett "
+"tredje (säkert) alternativ, att hoppa över att installera LILO för "
+"tillfället. Du kan alltid installera den senare med \"liloconfig\" "
+"kommandot. Vilket alternativ vill du ha?"
+
+#
+# File: 32-liloconfig, line: 798
+# File: 64-liloconfig, line: 798
+#: src/liloconfig:761
+msgid "Try to install LILO automatically"
+msgstr "Försök installera LILO automatiskt"
+
+#
+# File: 32-liloconfig, line: 799
+# File: 64-liloconfig, line: 799
+#: src/liloconfig:762
+msgid "Use expert lilo.conf setup menu"
+msgstr "Använd expert lilo.conf installationsmeny"
+
+#
+# File: 32-liloconfig, line: 800
+# File: 64-liloconfig, line: 800
+#: src/liloconfig:763
+msgid "Do not install LILO"
+msgstr "Installera inte LILO"
+
+#
+# File: 32-liloconfig, line: 815
+# File: 64-liloconfig, line: 815
+#: src/liloconfig:778
+msgid "EXPERT LILO INSTALLATION"
+msgstr "EXPERT LILO INSTALLATION"
+
+#
+# File: 32-liloconfig, line: 816
+# File: 64-liloconfig, line: 816
+#: src/liloconfig:779
+msgid ""
+"This menu directs the creation of the LILO config file, lilo.conf. To "
+"install, you make a new LILO configuration file by creating a new header and "
+"then adding one or more bootable partitions to the file. Once you've done "
+"this, you can select the install option. Alternately, if you already have "
+"an /etc/lilo.conf, you may reinstall using that. If you make a mistake, you "
+"can always start over by choosing 'Begin'. Which option would you like?"
+msgstr ""
+"Denna meny styr skapandet av LILO konfigurationsfil, lilo.conf. För att "
+"installera, skapar du en ny LILO konfigurationsfil genom att skapa en ny "
+"rubrik och sedan lägger till en eller flera startbara partitioner till "
+"filen. När du har gjort detta kan du välja installationsalternativ. "
+"Alternativt, om du redan har en /etc/lilo.conf, kan du installera med hjälp "
+"av den. Om du gör ett misstag, kan du alltid börja om genom att välja \"Börja"
+"\". Vilket alternativ vill du ha?"
+
+#
+# File: 32-liloconfig, line: 823
+# File: 64-liloconfig, line: 823
+#: src/liloconfig:786
+msgid "Start LILO configuration with a new LILO header"
+msgstr "Börja LILO konfiguration med en ny LILO header"
+
+#
+# File: 32-liloconfig, line: 824
+# File: 64-liloconfig, line: 824
+#: src/liloconfig:787
+msgid "Add a Linux partition to the LILO config"
+msgstr "Lägg till en partition till LILO konfigurationen"
+
+#
+# File: 32-liloconfig, line: 825
+# File: 64-liloconfig, line: 825
+#: src/liloconfig:788
+msgid "Add a Windows FAT or NTFS partition to the LILO config"
+msgstr ""
+"Lägg till en Windows FAT eller NTFS partition till LILO konfigurationen"
+
+#
+# File: 32-liloconfig, line: 826
+# File: 64-liloconfig, line: 826
+#: src/liloconfig:789
+msgid "Install LILO"
+msgstr "Installera LILO"
+
+#
+# File: 32-liloconfig, line: 827
+# File: 64-liloconfig, line: 827
+#: src/liloconfig:790
+msgid "Reinstall LILO using the existing lilo.conf"
+msgstr "Återinstallera LILO med existerande lilo.conf"
+
+#
+# File: 32-liloconfig, line: 828
+# File: 64-liloconfig, line: 828
+#: src/liloconfig:791
+msgid "Skip LILO installation and exit this menu"
+msgstr "Hoppa över LILO installationen och avsluta denna meny"
+
+#
+# File: 32-liloconfig, line: 829
+# File: 64-liloconfig, line: 829
+#: src/liloconfig:792
+msgid "View your current /etc/lilo.conf"
+msgstr "Visa nuvarande /etc/lilo.conf"
+
+#
+# File: 32-liloconfig, line: 830
+# File: 64-liloconfig, line: 830
+#: src/liloconfig:793
+msgid "Read the Linux Loader HELP file"
+msgstr "Läs Linux Loader HJÄLP-fil"
+
+#
+# File: 32-liloconfig, line: 853
+# File: 64-liloconfig, line: 853
+#: src/liloconfig:811
+#, sh-format
+msgid "SELECT LILO TARGET LOCATION"
+msgstr "VÄLJ LILO MÅLPLATS"
+
+#
+# File: 32-liloconfig, line: 853
+# File: 64-liloconfig, line: 853
+#: src/liloconfig:811
+msgid ""
+"LILO can be installed to a variety of places:  the superblock of your root "
+"Linux partition (which could then be made the bootable partition with "
+"fdisk), a formatted floppy disk, or the master boot record of your first "
+"hard drive.  If you're using a boot system such as Boot Manager, you should "
+"use the Root selection.  Please pick a target location:"
+msgstr ""
+"LILO kan installeras på flera olika ställen: superblock på din root Linux-"
+"partition (som sedan kan göras startbar med fdisk), en formaterad diskett "
+"eller master boot record på din första hårddisk. Om du använder en "
+"startsystem såsom Boot Manager, bör du använda Root valet. Vänligen välj en "
+"målplats:"
+
+#
+# File: 32-liloconfig, line: 861
+# File: 64-liloconfig, line: 861
+#: src/liloconfig:819
+msgid "Use a formatted floppy disk in the boot drive"
+msgstr "Använd en formaterad diskett i startenheten"
+
+#
+# File: 32-liloconfig, line: 862
+# File: 64-liloconfig, line: 862
+#: src/liloconfig:820
+msgid "Use the Master Boot Record (possibly unsafe)"
+msgstr "Använd Master Boot Record (eventuellt osäkert)"
+
+#
+# File: 32-liloconfig, line: 895
+# File: 64-liloconfig, line: 895
+#: src/liloconfig:853
+msgid "CONFIRM LOCATION TO INSTALL LILO"
+msgstr "BEKRÄFTA PLATS ATT INSTALLERA LILO PÅ"
+
+#
+# File: 32-liloconfig, line: 896
+# File: 64-liloconfig, line: 896
+#: src/liloconfig:854
+msgid ""
+"The auto-detected location to install the LILO boot block is shown below.  "
+"If you need to make any changes, you can make them below.  Otherwise, hit "
+"ENTER to accept the target location shown."
+msgstr ""
+"Den automat-upptäckta platsen för att installera LILO startblock visas "
+"nedan. Om du behöver göra några ändringar kan du göra dem nedan. Annars "
+"tryck ENTER för att acceptera målplatsen visas."
+
+#
+# File: 32-liloconfig, line: 911
+# File: 64-liloconfig, line: 911
+#: src/liloconfig:869
+msgid "CHOOSE LILO TIMEOUT"
+msgstr "VÄLJ LILO TIMEOUT"
+
+#
+# File: 32-liloconfig, line: 911
+# File: 64-liloconfig, line: 911
+#: src/liloconfig:869
+msgid ""
+"At boot time, how long would you like LILO to wait for you to select an "
+"operating system?  If you let LILO time out, it will boot the first OS in "
+"the configuration file by default."
+msgstr ""
+"Vid uppstart, hur länge skulle du vilja LILO att vänta på dig att välja ett "
+"operativsystem? Om du låter LILO ta timeout, kommer den att starta det "
+"första OS i konfigurationsfilen som standard."
+
+#
+# File: 32-liloconfig, line: 915
+# File: 64-liloconfig, line: 915
+#: src/liloconfig:873
+msgid "Don't wait at all - boot straight into the first OS"
+msgstr "Vänta inte - starta direkt till första OS"
+
+#
+# File: 32-liloconfig, line: 916
+# File: 64-liloconfig, line: 916
+#: src/liloconfig:874
+msgid "5 seconds"
+msgstr "5 sekunder"
+
+#
+# File: 32-liloconfig, line: 917
+# File: 64-liloconfig, line: 917
+#: src/liloconfig:875
+msgid "30 seconds"
+msgstr "30 sekunder"
+
+#
+# File: 32-liloconfig, line: 918
+# File: 64-liloconfig, line: 918
+#: src/liloconfig:876
+msgid "Present a prompt and wait until a choice is made"
+msgstr "Visa en prompt och vänta tills ett val görs"
+
+#
+# File: 32-liloconfig, line: 1034
+# File: 64-liloconfig, line: 1034
+#: src/liloconfig:997
+#, sh-format
+msgid "SELECT LINUX PARTITION $DEFROOT"
+msgstr "VÄLJ LINUX-PARTITION $DEFROOT"
+
+#
+# File: 32-liloconfig, line: 1036
+# File: 64-liloconfig, line: 1036
+#: src/liloconfig:999
+msgid "Which Linux partition would you like LILO to boot?"
+msgstr "Vilken Linux-partition vill du LILO skall starta upp?"
+
+#
+# File: 32-liloconfig, line: 1058
+# File: 64-liloconfig, line: 1058
+#: src/liloconfig:1021
+#, sh-format
+msgid "SELECT PARTITION NAME FOR $LINUX_PART"
+msgstr "VÄLJ PARTITONSNAMN FÖR $LINUX_PART"
+
+#
+# File: 32-liloconfig, line: 1059
+# File: 64-liloconfig, line: 1059
+#: src/liloconfig:1022
+msgid ""
+"Now you must select a short, unique name for this partition. You'll use this "
+"name if you specify a partition to boot at the LILO prompt. 'Linux' might "
+"not be a bad choice. THIS MUST BE A SINGLE WORD."
+msgstr ""
+"Nu måste du välja ett kort, unikt namn för denna partition. Du kommer att "
+"använda detta namn om du anger en partition för start vid LILO prompten. "
+"\"Linux\" är kanske inte ett dåligt val. DETTA MÅSTE VARA ETT ENDA ORD."
+
+#
+# File: 32-liloconfig, line: 1085
+# File: 64-liloconfig, line: 1085
+#: src/liloconfig:1048
+msgid ""
+"These are possibly OS/2 partitions. They will be treated as such if you "
+"install them using this menu."
+msgstr ""
+"Dessa är möjligen OS/2 partitioner. De kommer att behandlas som en sådan om "
+"du installerar dem med den här menyn."
+
+#
+# File: 32-liloconfig, line: 1093
+# File: 32-liloconfig, line: 1159
+# File: 64-liloconfig, line: 1093
+# File: 64-liloconfig, line: 1159
+#: src/liloconfig:1056 src/liloconfig:1122
+msgid "Which one would you like LILO to boot?"
+msgstr "Vilken skulle du vilja LILO att starta upp?"
+
+#
+# File: 32-liloconfig, line: 1095
+# File: 64-liloconfig, line: 1095
+#: src/liloconfig:1058
+msgid "SELECT OS/2 PARTITION"
+msgstr "VÄLJ OS/2 PARTITION"
+
+#
+# File: 32-liloconfig, line: 1107
+# File: 32-liloconfig, line: 1173
+# File: 64-liloconfig, line: 1107
+# File: 64-liloconfig, line: 1173
+#: src/liloconfig:1070 src/liloconfig:1136
+msgid "SELECT PARTITION NAME"
+msgstr "VÄLJ PARTITIONSNAMN"
+
+#
+# File: 32-liloconfig, line: 1108
+# File: 64-liloconfig, line: 1108
+#: src/liloconfig:1071
+msgid ""
+"Now you must select a short, unique name for this partition. You'll use this "
+"name if you specify a partition to boot at the LILO prompt. 'OS/2' might not "
+"be a bad choice. THIS MUST BE A SINGLE WORD."
+msgstr ""
+"Nu måste du välja ett kort, unikt namn för denna partition. Du kommer att "
+"använda detta namn om du anger en partition för start vid LILO prompten. "
+"\"OS/2\" är kanske inte ett dåligt val. DETTA MÅSTE VARA ETT ENDA ORD."
+
+#
+# File: 32-liloconfig, line: 1140
+# File: 64-liloconfig, line: 1140
+#: src/liloconfig:1103
+msgid "CAN'T ADD OS/2 PARTITION"
+msgstr "KAN INTE LÄGGA TILL OS/2 PARTITION"
+
+#
+# File: 32-liloconfig, line: 1140
+# File: 32-liloconfig, line: 1216
+# File: 64-liloconfig, line: 1140
+# File: 64-liloconfig, line: 1216
+#: src/liloconfig:1103 src/liloconfig:1179
+msgid "You can't add partitions unless you start over with a new LILO header."
+msgstr ""
+"Det går inte att lägga till partitioner om du inte börja om med en ny LILO "
+"header."
+
+#
+# File: 32-liloconfig, line: 1147
+# File: 64-liloconfig, line: 1147
+#: src/liloconfig:1110
+msgid ""
+"These are possibly Windows or DOS partitions. They will be treated\n"
+"as such if you install them using this menu."
+msgstr ""
+"Dessa är möjligen Windows eller DOS-partitioner. De kommer att\n"
+"behandlas som sådan om du installerar dem med den här menyn."
+
+#
+# File: 32-liloconfig, line: 1161
+# File: 64-liloconfig, line: 1161
+#: src/liloconfig:1124
+msgid "SELECT WINDOWS PARTITION"
+msgstr "VÄLJ WINDOWS PARTITION"
+
+#
+# File: 32-liloconfig, line: 1174
+# File: 64-liloconfig, line: 1174
+#: src/liloconfig:1137
+msgid ""
+"Now you must select a short, unique name for this partition. You'll use this "
+"name if you specify a partition to boot at the LILO prompt. 'Windows' might "
+"not be a bad choice. THIS MUST BE A SINGLE WORD."
+msgstr ""
+"Nu måste du välja ett kort, unikt namn för denna partition. Du kommer att "
+"använda detta namn om du anger en partition för start vid LILO prompten. "
+"\"Windows\" är kanske inte ett dåligt val. DETTA MÅSTE VARA ETT ENDA ORD."
+
+#
+# File: 32-liloconfig, line: 1216
+# File: 64-liloconfig, line: 1216
+#: src/liloconfig:1179
+msgid "CAN'T ADD WINDOWS PARTITION"
+msgstr "KAN INTE LÄGGA TILL WINDOWS PARTITION"
+
+#
+# File: 32-liloconfig, line: 1226
+# File: 64-liloconfig, line: 1226
+#: src/liloconfig:1189
+msgid "CAN'T INSTALL LILO"
+msgstr "KAN INTE INSTALLERA LILO"
+
+#
+# File: 32-liloconfig, line: 1226
+# File: 64-liloconfig, line: 1226
+#: src/liloconfig:1189
+msgid ""
+"LILO could not be installed. If you have not created a LILO configuration "
+"file by defining a new header and adding at least one bootable partition to "
+"it, you must do so before installing LILO. If you were attempting to use an "
+"existing LILO configuration file, it could not be found. Try making a new "
+"one."
+msgstr ""
+"LILO kunde inte installeras. Om du inte har skapat en LILO konfigurationsfil "
+"genom att definiera en ny header och lägga åtminstone en startbar partition "
+"till den, måste du göra det innan du installerar LILO. Om du försöker "
+"använda en befintlig LILO konfigurationsfil, den kunde inte hittas. Prova "
+"att göra en ny."
+
+#
+# File: 32-liloconfig, line: 1251
+# File: 64-liloconfig, line: 1251
+#: src/liloconfig:1214
+msgid "YOUR NEW /etc/lilo.conf"
+msgstr "DIN NYA /etc/lilo.conf"
+
+#
+# File: 32-liloconfig, line: 1254
+# File: 32-liloconfig, line: 1256
+# File: 64-liloconfig, line: 1254
+# File: 64-liloconfig, line: 1256
+#: src/liloconfig:1217 src/liloconfig:1219
+msgid "YOUR OLD /etc/lilo.conf"
+msgstr "DIN GAMLA /etc/lilo.conf"
+
+#
+# File: 32-liloconfig, line: 1258
+# File: 64-liloconfig, line: 1258
+#: src/liloconfig:1221
+msgid "NO CONFIG FILE FOUND"
+msgstr "INGEN KONFIGURATIONSFIL HITTADES"
+
+#
+# File: 32-liloconfig, line: 1258
+# File: 64-liloconfig, line: 1258
+#: src/liloconfig:1221
+msgid "Sorry, but you don't have a LILO configuration file that can be viewed."
+msgstr "Ledsen, men du har ingen LILO konfigurationsfil som kan visas."
