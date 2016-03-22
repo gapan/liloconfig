@@ -30,6 +30,8 @@ cleanpo:
 
 .PHONY: install
 install:
+	install -d -m 755 $(DESTDIR)/sbin
+	install -m 755 src/liloconfig $(DESTDIR)/sbin/
 	for i in `ls po/*.mo`; do \
 		install -d -m 755 \
 		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES \
