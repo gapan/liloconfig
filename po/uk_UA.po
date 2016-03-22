@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 21:58+0200\n"
+"POT-Creation-Date: 2016-03-22 23:17+0200\n"
 "PO-Revision-Date: 2016-03-22 00:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -91,8 +91,8 @@ msgid ""
 "Would you like to use a boot screen with the Salix logo against a black "
 "background?  If you answer no here, the standard LILO menu will be used.\n"
 msgstr ""
-"Використовувати екран завантаження з логотипом Salix замість чорного "
-"тла? Якщо відповісти ні, буде використано стандартне меню LILO.\n"
+"Використовувати екран завантаження з логотипом Salix замість чорного тла? "
+"Якщо відповісти ні, буде використано стандартне меню LILO.\n"
 
 #
 # File: 32-13.37-liloconfig, line: 142
@@ -228,11 +228,11 @@ msgid ""
 "won't require any extra parameters.  If you want to use hibernation, please "
 "add a resume option for your swap partition. For example: 'resume=/dev/sda3' "
 "if your swap partition is /dev/sda3. If you don't need any, just hit ENTER "
-"to continue.\\n"
+"to continue."
 msgstr ""
 "Деякі системи можуть вимагати передачі ядру додаткових  параметрів. Якщо "
-"знадобилися параметри завантажувальному диску Salix, ймовірно, потрібно "
-"їх вказати й тут. Більшість систем додаткових параметрів не вимагають. Якщо "
+"знадобилися параметри завантажувальному диску Salix, ймовірно, потрібно їх "
+"вказати й тут. Більшість систем додаткових параметрів не вимагають. Якщо "
 "параметри не потрібні, просто натисніть ENTER для продовження.\n"
 
 #
@@ -242,7 +242,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 270
 # File: 64-14.0-liloconfig, line: 270
 # File: 64-14.1-liloconfig, line: 305
-#: src/liloconfig:297
+#: src/liloconfig:296
 msgid "OS/2 BOOT MANAGER FOUND"
 msgstr "ВИЯВЛЕНО BOOT MANAGER З OS/2"
 
@@ -253,7 +253,7 @@ msgstr "ВИЯВЛЕНО BOOT MANAGER З OS/2"
 # File: 64-13.37-liloconfig, line: 271
 # File: 64-14.0-liloconfig, line: 271
 # File: 64-14.1-liloconfig, line: 306
-#: src/liloconfig:298
+#: src/liloconfig:297
 msgid ""
 "Your system appears to have Boot Manager, a boot menu system provided with "
 "OS/2 and Partition Magic.  If you like, we can install a very simple LILO "
@@ -275,7 +275,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 338
 # File: 64-14.0-liloconfig, line: 338
 # File: 64-14.1-liloconfig, line: 374
-#: src/liloconfig:352
+#: src/liloconfig:351
 #, sh-format
 msgid "SELECT LILO DESTINATION"
 msgstr "ВИБІР МІСЦЯ ВСТАНОВЛЕННЯ LILO"
@@ -287,7 +287,7 @@ msgstr "ВИБІР МІСЦЯ ВСТАНОВЛЕННЯ LILO"
 # File: 64-13.37-liloconfig, line: 339
 # File: 64-14.0-liloconfig, line: 339
 # File: 64-14.1-liloconfig, line: 375
-#: src/liloconfig:353
+#: src/liloconfig:352
 msgid ""
 "LILO can be installed to a variety of places:\n"
 "\n"
@@ -326,7 +326,7 @@ msgstr ""
 # File: 64-14.0-liloconfig, line: 817
 # File: 64-14.1-liloconfig, line: 387
 # File: 64-14.1-liloconfig, line: 864
-#: src/liloconfig:365 src/liloconfig:818
+#: src/liloconfig:364 src/liloconfig:817
 msgid "Install to superblock (not for use with XFS)"
 msgstr "Встановити у суперблок (несумісно з XFS)"
 
@@ -337,7 +337,7 @@ msgstr "Встановити у суперблок (несумісно з XFS)"
 # File: 64-13.37-liloconfig, line: 352
 # File: 64-14.0-liloconfig, line: 352
 # File: 64-14.1-liloconfig, line: 388
-#: src/liloconfig:366
+#: src/liloconfig:365
 msgid "Install to a formatted floppy in /dev/fd0 (A:)"
 msgstr "Встановити на форматовану дискету в /dev/fd0 (A:)"
 
@@ -348,7 +348,7 @@ msgstr "Встановити на форматовану дискету в /dev/
 # File: 64-13.37-liloconfig, line: 353
 # File: 64-14.0-liloconfig, line: 353
 # File: 64-14.1-liloconfig, line: 389
-#: src/liloconfig:367
+#: src/liloconfig:366
 msgid "Install to Master Boot Record"
 msgstr "Встановити у основний завантажувальний запис (MBR)"
 
@@ -359,7 +359,7 @@ msgstr "Встановити у основний завантажувальни�
 # File: 64-13.37-liloconfig, line: 551
 # File: 64-14.0-liloconfig, line: 551
 # File: 64-14.1-liloconfig, line: 594
-#: src/liloconfig:577
+#: src/liloconfig:576
 #, sh-format
 msgid "I can't find a device named $ArG1 !"
 msgstr "Не виявлено пристрій $ArG1 !"
@@ -371,7 +371,7 @@ msgstr "Не виявлено пристрій $ArG1 !"
 # File: 64-13.37-liloconfig, line: 555
 # File: 64-14.0-liloconfig, line: 555
 # File: 64-14.1-liloconfig, line: 598
-#: src/liloconfig:581
+#: src/liloconfig:580
 msgid "Are you sure you want to use this device name "
 msgstr "Бажаєте використовувати це ім’я пристрою "
 
@@ -382,7 +382,7 @@ msgstr "Бажаєте використовувати це ім’я прист�
 # File: 64-13.37-liloconfig, line: 569
 # File: 64-14.0-liloconfig, line: 569
 # File: 64-14.1-liloconfig, line: 612
-#: src/liloconfig:595
+#: src/liloconfig:594
 msgid "DEVICE FILE NOT FOUND"
 msgstr "НЕ ВИЯВЛЕНО ФАЙЛ ПРИСТРОЮ"
 
@@ -393,7 +393,7 @@ msgstr "НЕ ВИЯВЛЕНО ФАЙЛ ПРИСТРОЮ"
 # File: 64-13.37-liloconfig, line: 569
 # File: 64-14.0-liloconfig, line: 569
 # File: 64-14.1-liloconfig, line: 612
-#: src/liloconfig:595
+#: src/liloconfig:594
 #, sh-format
 msgid ""
 "I can't find a device named $ArG1. Are you sure you want to use this device "
@@ -407,7 +407,7 @@ msgstr "Не виявлено пристрій $ArG1. Бажаєте викор�
 # File: 64-13.37-liloconfig, line: 606
 # File: 64-14.0-liloconfig, line: 604
 # File: 64-14.1-liloconfig, line: 647
-#: src/liloconfig:605
+#: src/liloconfig:604
 msgid "Installing the Linux Loader..."
 msgstr "Встановлення завантажувача Linux..."
 
@@ -418,7 +418,7 @@ msgstr "Встановлення завантажувача Linux..."
 # File: 64-13.37-liloconfig, line: 633
 # File: 64-14.0-liloconfig, line: 631
 # File: 64-14.1-liloconfig, line: 678
-#: src/liloconfig:632
+#: src/liloconfig:631
 #, sh-format
 msgid ""
 "Sorry, but the attempt to install LILO has returned an error, so LILO has "
@@ -442,7 +442,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 674
 # File: 64-14.0-liloconfig, line: 672
 # File: 64-14.1-liloconfig, line: 719
-#: src/liloconfig:672
+#: src/liloconfig:671
 #, sh-format
 msgid ""
 "LILO INSTALL ERROR # $SUCCESS\n"
@@ -469,7 +469,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 736
 # File: 64-14.0-liloconfig, line: 734
 # File: 64-14.1-liloconfig, line: 781
-#: src/liloconfig:734
+#: src/liloconfig:733
 msgid "SKIP LILO CONFIGURATION? (RECOMMENDED)"
 msgstr "ПОПУСТИТИ НАЛАШТУВАННЯ LILO (РЕКОМЕНДУЄТЬСЯ)"
 
@@ -480,7 +480,7 @@ msgstr "ПОПУСТИТИ НАЛАШТУВАННЯ LILO (РЕКОМЕНДУЄТ
 # File: 64-13.37-liloconfig, line: 736
 # File: 64-14.0-liloconfig, line: 734
 # File: 64-14.1-liloconfig, line: 781
-#: src/liloconfig:735
+#: src/liloconfig:734
 msgid ""
 "Since you are installing to a FAT partition, it's suggested that you do not "
 "configure LILO at this time.  (Instead, use your bootdisk.  For booting off "
@@ -501,7 +501,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 748
 # File: 64-14.0-liloconfig, line: 746
 # File: 64-14.1-liloconfig, line: 793
-#: src/liloconfig:751
+#: src/liloconfig:750
 msgid "INSTALL LILO"
 msgstr "ВСТАНОВЛЕННЯ LILO"
 
@@ -512,7 +512,7 @@ msgstr "ВСТАНОВЛЕННЯ LILO"
 # File: 64-13.37-liloconfig, line: 748
 # File: 64-14.0-liloconfig, line: 746
 # File: 64-14.1-liloconfig, line: 793
-#: src/liloconfig:752
+#: src/liloconfig:751
 msgid ""
 "LILO (Linux Loader) is a generic boot loader.  There's a simple installation "
 "which tries to automatically set up LILO to boot Linux (also Windows if "
@@ -538,7 +538,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 757
 # File: 64-14.0-liloconfig, line: 755
 # File: 64-14.1-liloconfig, line: 802
-#: src/liloconfig:761
+#: src/liloconfig:760
 msgid "Try to install LILO automatically"
 msgstr "Спробувати автоматично встановити LILO"
 
@@ -549,7 +549,7 @@ msgstr "Спробувати автоматично встановити LILO"
 # File: 64-13.37-liloconfig, line: 758
 # File: 64-14.0-liloconfig, line: 756
 # File: 64-14.1-liloconfig, line: 803
-#: src/liloconfig:762
+#: src/liloconfig:761
 msgid "Use expert lilo.conf setup menu"
 msgstr "Експертне меню для налаштування lilo.conf"
 
@@ -560,7 +560,7 @@ msgstr "Експертне меню для налаштування lilo.conf"
 # File: 64-13.37-liloconfig, line: 759
 # File: 64-14.0-liloconfig, line: 757
 # File: 64-14.1-liloconfig, line: 804
-#: src/liloconfig:763
+#: src/liloconfig:762
 msgid "Do not install LILO"
 msgstr "Не встановлювати LILO"
 
@@ -571,7 +571,7 @@ msgstr "Не встановлювати LILO"
 # File: 64-13.37-liloconfig, line: 774
 # File: 64-14.0-liloconfig, line: 772
 # File: 64-14.1-liloconfig, line: 819
-#: src/liloconfig:778
+#: src/liloconfig:777
 msgid "EXPERT LILO INSTALLATION"
 msgstr "ЕКСПЕРТНЕ ВСТАНОВЛЕННЯ LILO"
 
@@ -582,7 +582,7 @@ msgstr "ЕКСПЕРТНЕ ВСТАНОВЛЕННЯ LILO"
 # File: 64-13.37-liloconfig, line: 775
 # File: 64-14.0-liloconfig, line: 773
 # File: 64-14.1-liloconfig, line: 820
-#: src/liloconfig:779
+#: src/liloconfig:778
 msgid ""
 "This menu directs the creation of the LILO config file, lilo.conf. To "
 "install, you make a new LILO configuration file by creating a new header and "
@@ -606,7 +606,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 782
 # File: 64-14.0-liloconfig, line: 780
 # File: 64-14.1-liloconfig, line: 827
-#: src/liloconfig:786
+#: src/liloconfig:785
 msgid "Start LILO configuration with a new LILO header"
 msgstr "Початок налаштування LILO з нового заголовку"
 
@@ -617,7 +617,7 @@ msgstr "Початок налаштування LILO з нового загол�
 # File: 64-13.37-liloconfig, line: 783
 # File: 64-14.0-liloconfig, line: 781
 # File: 64-14.1-liloconfig, line: 828
-#: src/liloconfig:787
+#: src/liloconfig:786
 msgid "Add a Linux partition to the LILO config"
 msgstr "Додавання розділу Linux в lilo.conf"
 
@@ -628,7 +628,7 @@ msgstr "Додавання розділу Linux в lilo.conf"
 # File: 64-13.37-liloconfig, line: 784
 # File: 64-14.0-liloconfig, line: 782
 # File: 64-14.1-liloconfig, line: 829
-#: src/liloconfig:788
+#: src/liloconfig:787
 msgid "Add a Windows FAT or NTFS partition to the LILO config"
 msgstr "Додавання розділу Windows, FAT або NTFS, в lilo.conf"
 
@@ -639,7 +639,7 @@ msgstr "Додавання розділу Windows, FAT або NTFS, в lilo.conf
 # File: 64-13.37-liloconfig, line: 785
 # File: 64-14.0-liloconfig, line: 783
 # File: 64-14.1-liloconfig, line: 830
-#: src/liloconfig:789
+#: src/liloconfig:788
 msgid "Install LILO"
 msgstr "Встановити LILO"
 
@@ -650,7 +650,7 @@ msgstr "Встановити LILO"
 # File: 64-13.37-liloconfig, line: 786
 # File: 64-14.0-liloconfig, line: 784
 # File: 64-14.1-liloconfig, line: 831
-#: src/liloconfig:790
+#: src/liloconfig:789
 msgid "Reinstall LILO using the existing lilo.conf"
 msgstr "Перевстановити LILO з існуючим lilo.conf"
 
@@ -661,7 +661,7 @@ msgstr "Перевстановити LILO з існуючим lilo.conf"
 # File: 64-13.37-liloconfig, line: 787
 # File: 64-14.0-liloconfig, line: 785
 # File: 64-14.1-liloconfig, line: 832
-#: src/liloconfig:791
+#: src/liloconfig:790
 msgid "Skip LILO installation and exit this menu"
 msgstr "Пропустити встановлення LILO та вийти з меню"
 
@@ -672,7 +672,7 @@ msgstr "Пропустити встановлення LILO та вийти з м
 # File: 64-13.37-liloconfig, line: 788
 # File: 64-14.0-liloconfig, line: 786
 # File: 64-14.1-liloconfig, line: 833
-#: src/liloconfig:792
+#: src/liloconfig:791
 msgid "View your current /etc/lilo.conf"
 msgstr "Дивитися поточний /etc/lilo.conf"
 
@@ -683,7 +683,7 @@ msgstr "Дивитися поточний /etc/lilo.conf"
 # File: 64-13.37-liloconfig, line: 789
 # File: 64-14.0-liloconfig, line: 787
 # File: 64-14.1-liloconfig, line: 834
-#: src/liloconfig:793
+#: src/liloconfig:792
 msgid "Read the Linux Loader HELP file"
 msgstr "Перегляд файлу довідки LILO"
 
@@ -694,7 +694,7 @@ msgstr "Перегляд файлу довідки LILO"
 # File: 64-13.37-liloconfig, line: 812
 # File: 64-14.0-liloconfig, line: 810
 # File: 64-14.1-liloconfig, line: 857
-#: src/liloconfig:811
+#: src/liloconfig:810
 #, sh-format
 msgid "SELECT LILO TARGET LOCATION"
 msgstr "ВИБІР МІСЦЯ ВСТАНОВЛЕННЯ LILO"
@@ -706,7 +706,7 @@ msgstr "ВИБІР МІСЦЯ ВСТАНОВЛЕННЯ LILO"
 # File: 64-13.37-liloconfig, line: 812
 # File: 64-14.0-liloconfig, line: 810
 # File: 64-14.1-liloconfig, line: 857
-#: src/liloconfig:811
+#: src/liloconfig:810
 msgid ""
 "LILO can be installed to a variety of places:  the superblock of your root "
 "Linux partition (which could then be made the bootable partition with "
@@ -728,7 +728,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 820
 # File: 64-14.0-liloconfig, line: 818
 # File: 64-14.1-liloconfig, line: 865
-#: src/liloconfig:819
+#: src/liloconfig:818
 msgid "Use a formatted floppy disk in the boot drive"
 msgstr "Форматована дискета у завантажувальному пристрої"
 
@@ -739,7 +739,7 @@ msgstr "Форматована дискета у завантажувально�
 # File: 64-13.37-liloconfig, line: 821
 # File: 64-14.0-liloconfig, line: 819
 # File: 64-14.1-liloconfig, line: 866
-#: src/liloconfig:820
+#: src/liloconfig:819
 msgid "Use the Master Boot Record (possibly unsafe)"
 msgstr "Основний завантажувальний запис - MBR (можливо небезпечно)"
 
@@ -750,7 +750,7 @@ msgstr "Основний завантажувальний запис - MBR (мо
 # File: 64-13.37-liloconfig, line: 854
 # File: 64-14.0-liloconfig, line: 852
 # File: 64-14.1-liloconfig, line: 899
-#: src/liloconfig:853
+#: src/liloconfig:852
 msgid "CONFIRM LOCATION TO INSTALL LILO"
 msgstr "ПІДТВЕРДЖЕННЯ МІСЦЯ ВСТАНОВЛЕННЯ LILO"
 
@@ -761,7 +761,7 @@ msgstr "ПІДТВЕРДЖЕННЯ МІСЦЯ ВСТАНОВЛЕННЯ LILO"
 # File: 64-13.37-liloconfig, line: 855
 # File: 64-14.0-liloconfig, line: 853
 # File: 64-14.1-liloconfig, line: 900
-#: src/liloconfig:854
+#: src/liloconfig:853
 msgid ""
 "The auto-detected location to install the LILO boot block is shown below.  "
 "If you need to make any changes, you can make them below.  Otherwise, hit "
@@ -778,7 +778,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 870
 # File: 64-14.0-liloconfig, line: 868
 # File: 64-14.1-liloconfig, line: 915
-#: src/liloconfig:869
+#: src/liloconfig:868
 msgid "CHOOSE LILO TIMEOUT"
 msgstr "ВИБІР ТАЙМАУТА LILO"
 
@@ -789,7 +789,7 @@ msgstr "ВИБІР ТАЙМАУТА LILO"
 # File: 64-13.37-liloconfig, line: 870
 # File: 64-14.0-liloconfig, line: 868
 # File: 64-14.1-liloconfig, line: 915
-#: src/liloconfig:869
+#: src/liloconfig:868
 msgid ""
 "At boot time, how long would you like LILO to wait for you to select an "
 "operating system?  If you let LILO time out, it will boot the first OS in "
@@ -806,7 +806,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 874
 # File: 64-14.0-liloconfig, line: 872
 # File: 64-14.1-liloconfig, line: 919
-#: src/liloconfig:873
+#: src/liloconfig:872
 msgid "Don't wait at all - boot straight into the first OS"
 msgstr "Не чекати, відразу завантажувати першу ОС"
 
@@ -817,7 +817,7 @@ msgstr "Не чекати, відразу завантажувати першу 
 # File: 64-13.37-liloconfig, line: 875
 # File: 64-14.0-liloconfig, line: 873
 # File: 64-14.1-liloconfig, line: 920
-#: src/liloconfig:874
+#: src/liloconfig:873
 msgid "5 seconds"
 msgstr "5 секунд"
 
@@ -828,7 +828,7 @@ msgstr "5 секунд"
 # File: 64-13.37-liloconfig, line: 876
 # File: 64-14.0-liloconfig, line: 874
 # File: 64-14.1-liloconfig, line: 921
-#: src/liloconfig:875
+#: src/liloconfig:874
 msgid "30 seconds"
 msgstr "30 секунд"
 
@@ -839,7 +839,7 @@ msgstr "30 секунд"
 # File: 64-13.37-liloconfig, line: 877
 # File: 64-14.0-liloconfig, line: 875
 # File: 64-14.1-liloconfig, line: 922
-#: src/liloconfig:876
+#: src/liloconfig:875
 msgid "Present a prompt and wait until a choice is made"
 msgstr "Вивести запрошення та чекати вибору користувача"
 
@@ -850,7 +850,7 @@ msgstr "Вивести запрошення та чекати вибору ко�
 # File: 64-13.37-liloconfig, line: 991
 # File: 64-14.0-liloconfig, line: 989
 # File: 64-14.1-liloconfig, line: 1038
-#: src/liloconfig:997
+#: src/liloconfig:996
 #, sh-format
 msgid "SELECT LINUX PARTITION $DEFROOT"
 msgstr "ВИБІР РОЗДІЛУ LINUX $DEFROOT"
@@ -862,7 +862,7 @@ msgstr "ВИБІР РОЗДІЛУ LINUX $DEFROOT"
 # File: 64-13.37-liloconfig, line: 993
 # File: 64-14.0-liloconfig, line: 991
 # File: 64-14.1-liloconfig, line: 1040
-#: src/liloconfig:999
+#: src/liloconfig:998
 msgid "Which Linux partition would you like LILO to boot?"
 msgstr "Який розділ Linux завантажувати за допомогою LILO?"
 
@@ -873,7 +873,7 @@ msgstr "Який розділ Linux завантажувати за допомо
 # File: 64-13.37-liloconfig, line: 1015
 # File: 64-14.0-liloconfig, line: 1013
 # File: 64-14.1-liloconfig, line: 1062
-#: src/liloconfig:1021
+#: src/liloconfig:1020
 #, sh-format
 msgid "SELECT PARTITION NAME FOR $LINUX_PART"
 msgstr "ВИБІР ІМ’Я РОЗДІЛУ ДЛЯ $LINUX_PART"
@@ -885,7 +885,7 @@ msgstr "ВИБІР ІМ’Я РОЗДІЛУ ДЛЯ $LINUX_PART"
 # File: 64-13.37-liloconfig, line: 1016
 # File: 64-14.0-liloconfig, line: 1014
 # File: 64-14.1-liloconfig, line: 1063
-#: src/liloconfig:1022
+#: src/liloconfig:1021
 msgid ""
 "Now you must select a short, unique name for this partition. You'll use this "
 "name if you specify a partition to boot at the LILO prompt. 'Linux' might "
@@ -902,7 +902,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 1042
 # File: 64-14.0-liloconfig, line: 1040
 # File: 64-14.1-liloconfig, line: 1089
-#: src/liloconfig:1048
+#: src/liloconfig:1047
 msgid ""
 "These are possibly OS/2 partitions. They will be treated as such if you "
 "install them using this menu."
@@ -923,7 +923,7 @@ msgstr ""
 # File: 64-14.0-liloconfig, line: 1114
 # File: 64-14.1-liloconfig, line: 1097
 # File: 64-14.1-liloconfig, line: 1163
-#: src/liloconfig:1056 src/liloconfig:1122
+#: src/liloconfig:1055 src/liloconfig:1121
 msgid "Which one would you like LILO to boot?"
 msgstr "Який розділ завантажувати за допомогою LILO?"
 
@@ -934,7 +934,7 @@ msgstr "Який розділ завантажувати за допомогою
 # File: 64-13.37-liloconfig, line: 1052
 # File: 64-14.0-liloconfig, line: 1050
 # File: 64-14.1-liloconfig, line: 1099
-#: src/liloconfig:1058
+#: src/liloconfig:1057
 msgid "SELECT OS/2 PARTITION"
 msgstr "ВИБІР РОЗДІЛУ OS/2"
 
@@ -951,7 +951,7 @@ msgstr "ВИБІР РОЗДІЛУ OS/2"
 # File: 64-14.0-liloconfig, line: 1128
 # File: 64-14.1-liloconfig, line: 1111
 # File: 64-14.1-liloconfig, line: 1177
-#: src/liloconfig:1070 src/liloconfig:1136
+#: src/liloconfig:1069 src/liloconfig:1135
 msgid "SELECT PARTITION NAME"
 msgstr "ВИБІР ІМ’Я РОЗДІЛУ"
 
@@ -962,7 +962,7 @@ msgstr "ВИБІР ІМ’Я РОЗДІЛУ"
 # File: 64-13.37-liloconfig, line: 1065
 # File: 64-14.0-liloconfig, line: 1063
 # File: 64-14.1-liloconfig, line: 1112
-#: src/liloconfig:1071
+#: src/liloconfig:1070
 msgid ""
 "Now you must select a short, unique name for this partition. You'll use this "
 "name if you specify a partition to boot at the LILO prompt. 'OS/2' might not "
@@ -979,7 +979,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 1097
 # File: 64-14.0-liloconfig, line: 1095
 # File: 64-14.1-liloconfig, line: 1144
-#: src/liloconfig:1103
+#: src/liloconfig:1102
 msgid "CAN'T ADD OS/2 PARTITION"
 msgstr "НЕ ВДАЛОСЯ ДОДАТИ РОЗДІЛ OS/2"
 
@@ -996,7 +996,7 @@ msgstr "НЕ ВДАЛОСЯ ДОДАТИ РОЗДІЛ OS/2"
 # File: 64-14.0-liloconfig, line: 1171
 # File: 64-14.1-liloconfig, line: 1144
 # File: 64-14.1-liloconfig, line: 1220
-#: src/liloconfig:1103 src/liloconfig:1179
+#: src/liloconfig:1102 src/liloconfig:1178
 msgid "You can't add partitions unless you start over with a new LILO header."
 msgstr "Неможливо додати розділ, не додавши новий заголовок LILO."
 
@@ -1007,7 +1007,7 @@ msgstr "Неможливо додати розділ, не додавши нов
 # File: 64-13.37-liloconfig, line: 1104
 # File: 64-14.0-liloconfig, line: 1102
 # File: 64-14.1-liloconfig, line: 1151
-#: src/liloconfig:1110
+#: src/liloconfig:1109
 msgid ""
 "These are possibly Windows or DOS partitions. They will be treated\n"
 "as such if you install them using this menu."
@@ -1022,7 +1022,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 1118
 # File: 64-14.0-liloconfig, line: 1116
 # File: 64-14.1-liloconfig, line: 1165
-#: src/liloconfig:1124
+#: src/liloconfig:1123
 msgid "SELECT WINDOWS PARTITION"
 msgstr "ВИБІР РОЗДІЛУ WINDOWS"
 
@@ -1033,7 +1033,7 @@ msgstr "ВИБІР РОЗДІЛУ WINDOWS"
 # File: 64-13.37-liloconfig, line: 1131
 # File: 64-14.0-liloconfig, line: 1129
 # File: 64-14.1-liloconfig, line: 1178
-#: src/liloconfig:1137
+#: src/liloconfig:1136
 msgid ""
 "Now you must select a short, unique name for this partition. You'll use this "
 "name if you specify a partition to boot at the LILO prompt. 'Windows' might "
@@ -1050,7 +1050,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 1173
 # File: 64-14.0-liloconfig, line: 1171
 # File: 64-14.1-liloconfig, line: 1220
-#: src/liloconfig:1179
+#: src/liloconfig:1178
 msgid "CAN'T ADD WINDOWS PARTITION"
 msgstr "НЕ ВДАЛОСЯ ДОДАТИ РОЗДІЛ WINDOWS"
 
@@ -1061,7 +1061,7 @@ msgstr "НЕ ВДАЛОСЯ ДОДАТИ РОЗДІЛ WINDOWS"
 # File: 64-13.37-liloconfig, line: 1183
 # File: 64-14.0-liloconfig, line: 1181
 # File: 64-14.1-liloconfig, line: 1230
-#: src/liloconfig:1189
+#: src/liloconfig:1188
 msgid "CAN'T INSTALL LILO"
 msgstr "НЕ ВДАЛОСЯ ВСТАНОВИТИ LILO"
 
@@ -1072,7 +1072,7 @@ msgstr "НЕ ВДАЛОСЯ ВСТАНОВИТИ LILO"
 # File: 64-13.37-liloconfig, line: 1183
 # File: 64-14.0-liloconfig, line: 1181
 # File: 64-14.1-liloconfig, line: 1230
-#: src/liloconfig:1189
+#: src/liloconfig:1188
 msgid ""
 "LILO could not be installed. If you have not created a LILO configuration "
 "file by defining a new header and adding at least one bootable partition to "
@@ -1092,7 +1092,7 @@ msgstr ""
 # File: 64-13.37-liloconfig, line: 1208
 # File: 64-14.0-liloconfig, line: 1206
 # File: 64-14.1-liloconfig, line: 1255
-#: src/liloconfig:1214
+#: src/liloconfig:1213
 msgid "YOUR NEW /etc/lilo.conf"
 msgstr "НОВИЙ /etc/lilo.conf"
 
@@ -1109,7 +1109,7 @@ msgstr "НОВИЙ /etc/lilo.conf"
 # File: 64-14.0-liloconfig, line: 1211
 # File: 64-14.1-liloconfig, line: 1258
 # File: 64-14.1-liloconfig, line: 1260
-#: src/liloconfig:1217 src/liloconfig:1219
+#: src/liloconfig:1216 src/liloconfig:1218
 msgid "YOUR OLD /etc/lilo.conf"
 msgstr "КОЛИШНІЙ /etc/lilo.conf"
 
@@ -1120,7 +1120,7 @@ msgstr "КОЛИШНІЙ /etc/lilo.conf"
 # File: 64-13.37-liloconfig, line: 1215
 # File: 64-14.0-liloconfig, line: 1213
 # File: 64-14.1-liloconfig, line: 1262
-#: src/liloconfig:1221
+#: src/liloconfig:1220
 msgid "NO CONFIG FILE FOUND"
 msgstr "НЕ ВИЯВЛЕНО ФАЙЛ НАЛАШТУВАННЯ"
 
@@ -1131,6 +1131,6 @@ msgstr "НЕ ВИЯВЛЕНО ФАЙЛ НАЛАШТУВАННЯ"
 # File: 64-13.37-liloconfig, line: 1215
 # File: 64-14.0-liloconfig, line: 1213
 # File: 64-14.1-liloconfig, line: 1262
-#: src/liloconfig:1221
+#: src/liloconfig:1220
 msgid "Sorry, but you don't have a LILO configuration file that can be viewed."
 msgstr "Відсутній файл налаштування LILO для перегляду."
