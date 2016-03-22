@@ -21,6 +21,7 @@ update-po: pot
 
 .PHONY: clean
 clean:
+	rm -f po/*.mo
 	rm -f po/*~
 
 .PHONY: cleanpo
