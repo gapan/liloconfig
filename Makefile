@@ -41,4 +41,4 @@ install:
 		2> /dev/null; \
 		install -m 644 $$i \
 		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES/liloconfig.mo; \
-	done; \
+	done;
