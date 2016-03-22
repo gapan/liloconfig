@@ -6,7 +6,6 @@ mo:
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
 	done
 
-
 .PHONY: pot
 pot:
 	xgettext --from-code=utf-8 -L shell -o po/liloconfig.pot src/liloconfig
