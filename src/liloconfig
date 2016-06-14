@@ -32,8 +32,6 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-export TEXTDOMAIN=liloconfig
-. gettext.sh
 TMP=/var/log/setup/tmp
 CONSOLETYPE=standard
 unset UTFVT
@@ -89,6 +87,12 @@ if [ ! -d "$T_PX" ]; then
     fi
   fi
 fi
+
+# Load locales with respect to $T_PX. Otherwise they won't work when
+# launched from the installer using setup.liloconfig
+export TEXTDOMAIN="liloconfig"
+export TEXTDOMAINDIR="$T_PX/usr/share/locale"
+. gettext.sh
 
 # If os-prober is available, we will use it to filter out unbootable
 # FAT/NTFS partitions.  If it is not availble, we'll use /bin/true
