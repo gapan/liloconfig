@@ -36,32 +36,6 @@ TMP=/var/log/setup/tmp
 CONSOLETYPE=standard
 unset UTFVT
 
-# Most of the time LILO is not used on UEFI machines (in fact, it is useless
-# unless the machine is running in legacy BIOS mode).  So, we'll detect if
-# this is a machine running UEFI and suggest skipping LILO installation.
-# We'll still allow it if the user wants it, though.  It won't hurt anything,
-# and might be useful for booting in Legacy BIOS mode later.
-if [ -d /sys/firmware/efi ]; then
-  dialog --visit-items --title "`gettext "UEFI FIRMWARE DETECTED"`" \
---backtitle "`gettext "LILO (Linux Loader) installation"`" \
---menu \
-"`gettext "Since LILO (the traditional Linux Loader) does not work with machines \
-running UEFI firmware (except in Legacy BIOS mode), you probably do not \
-need to install it.  Instead, you'll need ELILO, which is a version of \
-LILO designed to work with EFI/UEFI systems."`" \
-12 80 2 \
-"skip" "`gettext "Skip installing LILO and proceed to ELILO installation"`" \
-"install" "`gettext "Install LILO anyway"`" 2> $TMP/reply
- if [ $? = 1 -o $? = 255 ]; then
-  exit
- fi
- REPLY="`cat $TMP/reply`"
- rm -f $TMP/reply
- if [ "$REPLY" = "skip" ]; then
-   exit
- fi
-fi
-
 # Set the OS root directory (called T_PX for some unknown reason).
 # If an argument is given to this script and it is a directory, it
 # is taken to be the root directory.  First though, we check for a
@@ -93,6 +67,32 @@ fi
 export TEXTDOMAIN="liloconfig"
 export TEXTDOMAINDIR="$T_PX/usr/share/locale"
 . gettext.sh
+
+# Most of the time LILO is not used on UEFI machines (in fact, it is useless
+# unless the machine is running in legacy BIOS mode).  So, we'll detect if
+# this is a machine running UEFI and suggest skipping LILO installation.
+# We'll still allow it if the user wants it, though.  It won't hurt anything,
+# and might be useful for booting in Legacy BIOS mode later.
+if [ -d /sys/firmware/efi ]; then
+  dialog --visit-items --title "`gettext "UEFI FIRMWARE DETECTED"`" \
+--backtitle "`gettext "LILO (Linux Loader) installation"`" \
+--menu \
+"`gettext "Since LILO (the traditional Linux Loader) does not work with machines \
+running UEFI firmware (except in Legacy BIOS mode), you probably do not \
+need to install it.  Instead, you'll need ELILO, which is a version of \
+LILO designed to work with EFI/UEFI systems."`" \
+12 80 2 \
+"skip" "`gettext "Skip installing LILO and proceed to ELILO installation"`" \
+"install" "`gettext "Install LILO anyway"`" 2> $TMP/reply
+ if [ $? = 1 -o $? = 255 ]; then
+  exit
+ fi
+ REPLY="`cat $TMP/reply`"
+ rm -f $TMP/reply
+ if [ "$REPLY" = "skip" ]; then
+   exit
+ fi
+fi
 
 # If os-prober is available, we will use it to filter out unbootable
 # FAT/NTFS partitions.  If it is not availble, we'll use /bin/true
