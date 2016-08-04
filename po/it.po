@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Antonio Sardei <laplume@libero.it>, 2016
 # Didier Spaier <didier@slint.fr>, 2016
 # Giuseppe Pignataro <rogepix@gmail.com>, 2014
 # Guybrush88 <erpizzo@alice.it>, 2014
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-22 23:17+0200\n"
-"PO-Revision-Date: 2016-06-14 05:12+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2016-06-17 20:11+0000\n"
+"Last-Translator: Antonio Sardei <laplume@libero.it>\n"
 "Language-Team: Italian (http://www.transifex.com/gapan/salix/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,7 +69,7 @@ msgid ""
 "standard text console.  In addition, not every video card or monitor "
 "supports all of these video modes.  Would you like to use the frame buffer "
 "console, or the standard Linux console?"
-msgstr ""
+msgstr "Controllando in /proc/devices sembra che il kernel supporti la frame buffer console Linux. Se questa viene abilitata nel file /etc/lilo.conf all'avvio si potranno mostrare più righe e colonne sullo schermo ed anche un bel logo del Pinguino. Però la frame buffer console è più lenta della console standard a solo testo. Inoltre, non tutte le schede video supportano questa doppia modalità. Desideri usare la frame buffer console oppure la console standard?"
 
 #: src/liloconfig:196
 msgid "Use the standard Linux console (the safe choice)"
@@ -88,15 +89,15 @@ msgstr "Console frame buffer, 1024x768x64k"
 
 #: src/liloconfig:200
 msgid "Frame buffer console, 1280x1024x64k"
-msgstr ""
+msgstr "Console Frame buffer, 1280x1024x64k"
 
 #: src/liloconfig:201
 msgid "Frame buffer console, 1600x1200x64k"
-msgstr ""
+msgstr "Console Frame buffer, 1600x1200x64k"
 
 #: src/liloconfig:268
 msgid "OPTIONAL LILO append="
-msgstr ""
+msgstr "Aggiungi LILO OPZIONALE="
 
 #: src/liloconfig:269
 msgid ""
@@ -107,7 +108,7 @@ msgid ""
 "add a resume option for your swap partition. For example: 'resume=/dev/sda3'"
 " if your swap partition is /dev/sda3. If you don't need any, just hit ENTER "
 "to continue."
-msgstr ""
+msgstr "Alcuni sistemi richiedono di passare al kernel alcuni parametri aggiuntivi. Se hai dovuto passare parametri particolari al kernel quando hai eseguito il disco di avvio di Salix probabilmente vorrai inserire i medesimi parametri qui. Comunque la maggior parte dei sistemi non richiede parametri aggiuntivi. Se desideri usare l'ibernazione aggiungi un opzione resume alla partizione di swap. Ad esempio: 'resume=/dev/sda3' se la partizione di swap è in /dev/sda3. Se non ne hai bisogno premi solo ENTER per continuare."
 
 #: src/liloconfig:296
 msgid "OS/2 BOOT MANAGER FOUND"
