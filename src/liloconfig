@@ -2,7 +2,7 @@
 #
 # Copyright 1994, 1998, 1999 Patrick Volkerding, Moorhead, Minnesota USA
 # Copyright 2002, 2003  Slackware Linux, Inc, Concord, CA
-# Copyright 2007, 2008, 2011, 2013  Patrick Volkerding, Sebeka, Minnesota, USA
+# Copyright 2007, 2008, 2011, 2013, 2018, 2020  Patrick Volkerding, Sebeka, Minnesota, USA
 # All rights reserved.
 #
 # Tweaked for Salix OS by George Vlahavas <vlahavas~at~gmail~dot~com>
@@ -87,7 +87,7 @@ LILO designed to work with EFI/UEFI systems."`" \
  if [ $? = 1 -o $? = 255 ]; then
   exit
  fi
- REPLY="`cat $TMP/reply`"
+ REPLY="$(cat $TMP/reply)"
  rm -f $TMP/reply
  if [ "$REPLY" = "skip" ]; then
    exit
@@ -127,29 +127,8 @@ DEFAULT=" --default-item MBR "
 # This is a different 'probe' than the function below.
 PROBE() {
   if [ -x /sbin/probe ]; then
-    /sbin/probe -l
-  elif fdisk -l | grep "Disk /dev/ide" 1> /dev/null 2> /dev/null ; then # no devfs yet
-    for devs in /dev/hda /dev/hdb /dev/hdc /dev/hdd /dev/hde /dev/hdf /dev/hdg \
-      /dev/hdh /dev/hdi /dev/hdj /dev/hdk /dev/hdl /dev/hdm /dev/hdn /dev/hdo /dev/hdp \
-      /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi \
-      /dev/sdj /dev/sdk /dev/sdl /dev/sdm /dev/sdn /dev/sdo /dev/sdp ; do
-      fdisk -l $devs 2> /dev/null
-    done
-  elif fdisk -l | grep "Disk /dev/scsi" 1> /dev/null 2> /dev/null ; then # no devfs yet
-    for devs in /dev/hda /dev/hdb /dev/hdc /dev/hdd /dev/hde /dev/hdf /dev/hdg \
-      /dev/hdh /dev/hdi /dev/hdj /dev/hdk /dev/hdl /dev/hdm /dev/hdn /dev/hdo /dev/hdp \
-      /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi \
-      /dev/sdj /dev/sdk /dev/sdl /dev/sdm /dev/sdn /dev/sdo /dev/sdp ; do
-      fdisk -l $devs 2> /dev/null
-    done
-  elif [ -z "`fdisk -l`" ]; then
-    for devs in /dev/hda /dev/hdb /dev/hdc /dev/hdd /dev/hde /dev/hdf /dev/hdg \
-      /dev/hdh /dev/hdi /dev/hdj /dev/hdk /dev/hdl /dev/hdm /dev/hdn /dev/hdo /dev/hdp \
-      /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi \
-      /dev/sdj /dev/sdk /dev/sdl /dev/sdm /dev/sdn /dev/sdo /dev/sdp ; do
-      fdisk -l $devs 2> /dev/null
-    done
-  else # We got output without /dev/ide or /dev/scsi, so it can probably be trusted:
+    /sbin/probe -c
+  else # use fdisk directly:
     fdisk -l 2> /dev/null | sed -e "s/Linux filesystem/Linux/g"
   fi
 }
@@ -222,7 +201,7 @@ frame buffer console, or the standard Linux console?"`" 0 0 0 \
 #  "1024x768x16m" "Frame buffer console, 1024x768x16.8m" \
 #  "1280x1024x16m" "Frame buffer console, 1280x1024x16.8m" \
 #  "1600x1200x16m" "Frame buffer console, 1600x1200x16.8m"
-  CONSOLETYPE="`cat $TMP/reply`"
+  CONSOLETYPE="$(cat $TMP/reply)"
   if [ "$CONSOLETYPE" = "1600x1200x16m" ]; then
     CONSOLENUM=799
   elif [ "$CONSOLETYPE" = "1600x1200x64k" ]; then
@@ -292,7 +271,7 @@ simplelilo()
  if [ $? = 1 -o $? = 255 ]; then
   APPEND="quiet "
  fi
- APPEND="quiet `cat $TMP/reply`"
+ APPEND="quiet $(cat $TMP/reply)"
 
  UTFVT="vt.default_utf8=1"
 
@@ -372,14 +351,16 @@ Which option would you like?"`" \
  if [ $? = 1 -o $? = 255 ]; then
   exit
  fi
- TG="`cat $TMP/reply`"
+ TG="$(cat $TMP/reply)"
  rm -r $TMP/reply
+  dialog --infobox "\n`gettext "Scanning partitions and generating /etc/lilo.conf..."`" 0 0
+   sleep 1
  if [ "$TG" = "MBR" ]; then
   MBR_TARGET=/dev/sda
   echo $MBR_TARGET > $TMP/LILOMBR
   cat /proc/partitions | while read LINE ; do
-   MAJOR="`echo $LINE | cut -f 1 -d ' '`"
-   MINOR="`echo $LINE | cut -f 2 -d ' '`"
+  MAJOR="$(echo $LINE | cut -f 1 -d ' ')"
+  MINOR="$(echo $LINE | cut -f 2 -d ' ')"
    if [ ! "$MINOR" = "0" -a ! "$MINOR" = "64" ]; then # ignore whole devices to weed out CD drives
     if [ "$MAJOR" = "3" ]; then
      MBR_TARGET=/dev/hda
@@ -393,12 +374,23 @@ Which option would you like?"`" \
     elif [ "$MAJOR" = "34" -a ! "$MBR_TARGET" = "/dev/hda" -a ! "$MBR_TARGET" = "/dev/hdc" -a ! "$MBR_TARGET" = "/dev/hde" ]; then
      MBR_TARGET=/dev/hdg
      echo $MBR_TARGET > $TMP/LILOMBR
+    elif [ "$MAJOR" = "259" -a ! "$MBR_TARGET" = "/dev/hda" -a ! "$MBR_TARGET" = "/dev/hdc" -a ! "$MBR_TARGET" = "/dev/hde" -a ! "$MBR_TARGET" = "/dev/hdg" ]; then
+     if [ "$(echo $LINE | cut -f 4 -d ' ' | cut -b 1-4)" = "nvme" ]; then
+      MBR_TARGET="/dev/$(echo $LINE | cut -f 4 -d ' ' | cut -f 1 -d p)"
+      echo $MBR_TARGET > $TMP/LILOMBR
+     fi
+    fi
+    if dmidecode 2> /dev/null | grep -q QEMU 2> /dev/null ; then
+     if [ -r /dev/vda ]; then
+       MBR_TARGET=/dev/vda
+       echo $MBR_TARGET > $TMP/LILOMBR
+     fi
     fi
    fi
   done
-  LILO_TARGET=`cat $TMP/LILOMBR`
+  LILO_TARGET=$(cat $TMP/LILOMBR)
  elif [ "$TG" = "Root" ]; then
-  LILO_TARGET=`echo $ROOT_DEVICE`
+  LILO_TARGET=$(echo $ROOT_DEVICE)
  elif [ "$TG" = "Floppy" ]; then
   LILO_TARGET="/dev/fd0"
  fi
@@ -408,13 +400,18 @@ Which option would you like?"`" \
 #
 # Start LILO global section
 EOF
- if [ ! "$APPEND" = "" -o ! "$UTFVT" = "" ]; then
+ #if [ ! "$APPEND" = "" -o ! "$UTFVT" = "" ]; then
   echo "# Append any additional kernel parameters:" >> $T_PX/etc/lilo.conf
   echo "append=\"$APPEND $UTFVT\"" >> $T_PX/etc/lilo.conf
+  echo >> $T_PX/etc/lilo.conf
+ #fi
+
+ if echo $LILO_TARGET | grep -q vda 2>/dev/null ; then
+  echo "disk = /dev/vda bios=0x80 max-partitions=7" >> $T_PX/etc/lilo.conf
  fi
  cat << EOF >> $T_PX/etc/lilo.conf
 boot = $LILO_TARGET
-
+# This option loads the kernel and initrd much faster:
 compact
 
 # Boot BMP Image.
@@ -502,7 +499,7 @@ EOF
  # OK, now let's look for Windows partitions:
  # If we have os-prober, use the Windows partition list from that:
  if which os-prober > /dev/null ; then
-  DOSP="$(os-prober 2> /dev/null | grep Windows | cut -f 1 -d :)"
+  DOSP="$(os-prober 2> /dev/null | grep :Windows: | cut -f 1 -d :)"
  else # use PROBE output:
   DOSP="$(PROBE -l | grep "DOS
 Win
@@ -510,10 +507,10 @@ W95
 FAT12
 FAT16
 HPFS" | grep -v "Ext'd" | grep -v "Extend" | sort )"
-  DOSP="`echo $DOSP | cut -f 1 -d ' '`"
+  DOSP="$(echo $DOSP | cut -f 1 -d ' ')"
  fi
  if [ ! "$DOSP" = "" ]; then
-  TABLE="`echo $DOSP | cut -b1-8`"
+  TABLE="$(echo $DOSP | cut -b1-8)"
   cat << EOF >> $T_PX/etc/lilo.conf
 # Windows bootable partition config begins
 other = $DOSP
@@ -524,8 +521,8 @@ EOF
   echo "Windows  -  (Windows FAT/NTFS partition)" >> $T_PX/boot/boot_message.txt
  fi
  # Next, we search for Linux partitions:
- LNXP="`PROBE -l | grep "Linux$"`" 
- LNXP="`echo $LNXP | cut -f 1 -d ' ' | sort`"
+ LNXP="$(PROBE -l | grep "Linux$")" 
+ LNXP="$(echo $LNXP | cut -f 1 -d ' ' | sort)"
  if [ ! "$LNXP" = "" ]; then
   cat << EOF >> $T_PX/etc/lilo.conf
 # Linux bootable partition config begins
@@ -539,10 +536,10 @@ EOF
  fi
 # DEAD CODE, BUT IN CASE OS/2 MAKES A COMEBACK!
 # # OK, hopefully we can remember how to deal with OS/2 :^)
-# OS2P="`PROBE -l | grep "HPFS"`"
-# OS2P="`echo $OS2P | cut -f 1 -d ' ' | sort`"
+# OS2P="$(PROBE -l | grep "HPFS")"
+# OS2P="$(echo $OS2P | cut -f 1 -d ' ' | sort)"
 # if [ ! "$OS2P" = "" ]; then
-#  TABLE="`echo $OS2P | cut -b1-8`"
+#  TABLE="$(echo $OS2P | cut -b1-8)"
 #  if [ "$TABLE" = "/dev/hda" ]; then
 #   cat << EOF >> $T_PX/etc/lilo.conf
 ## OS/2 bootable partition config begins
@@ -689,13 +686,13 @@ echo
 # 'probe()' borrowed from LILO QuickInst.
 probe()
 {
- [ ! -z "`dd if=$1 bs=1 count=1 2>/dev/null | tr '\0' x`" ]
+ [ ! -z "$(dd if=$1 bs=1 count=1 2>/dev/null | tr '\0' x)" ]
  return
 }
 
 # Figure out if we're installing from the hard drive
 if [ -r $TMP/SeTT_PX ]; then
- T_PX="`cat $TMP/SeTT_PX`"
+ T_PX="$(cat $TMP/SeTT_PX)"
 else
  if [ "$T_PX" = "" -a ! "$1" = "" ]; then
   T_PX=$1
@@ -712,9 +709,9 @@ LNX="no" # this means no Linux partition has been defined as bootable
 ROOT_DEVICE=$2
 if [ "$ROOT_DEVICE" = "" ]; then
  if [ -r $TMP/SeTrootdev ]; then
-  ROOT_DEVICE="`cat $TMP/SeTrootdev`"
+  ROOT_DEVICE="$(cat $TMP/SeTrootdev)"
  else
-  ROOT_DEVICE="`mount | cut -f 1 -d " " | sed -n "1 p"`"
+  ROOT_DEVICE="$(mount | cut -f 1 -d " " | sed -n "1 p")"
  fi
 fi
 # Figure out where the kernel is:
@@ -731,21 +728,6 @@ else
   exit 99 # no kernel?  guess you couldn't read.  bye bye.
 fi
 
- # If we're installing from the umsdos.gz rootdisk, suggest skipping LILO:
- if [ ! "$T_PX" = "/" ]; then
-   if mount | grep " on /mnt " | grep umsdos 1> /dev/null 2> /dev/null ; then
-     dialog --title "`gettext "SKIP LILO CONFIGURATION? (RECOMMENDED)"`" \
-     --yesno "`gettext "Since \
-you are installing to a FAT partition, it's suggested that you do not \
-configure LILO at this time.  (Instead, use your bootdisk.  For booting \
-off the hard drive from MS-DOS, you can use Loadlin.  You'll find \
-Loadlin on your hard drive in \LINUX\ROOT) Skip LILO configuration \
-(highly recommended)?"`" 10 80
-     if [ $? = 0 ]; then
-       exit
-     fi 
-   fi
- fi
  # OK, now let's see if we should automate things:
  if [ "$3" == "auto" ]; then
   simplelilo
@@ -767,7 +749,7 @@ it later with the 'liloconfig' command.  Which option would you like?"`" \
  if [ $? = 1 -o $? = 255 ]; then
   exit
  fi
- REPLY="`cat $TMP/reply`"
+ REPLY="$(cat $TMP/reply)"
  rm -f $TMP/reply
  if [ "$REPLY" = "skip" ]; then
   exit
@@ -797,7 +779,7 @@ Which option would you like?"`" 21 80 8 \
   if [ $? = 1 -o $? = 255 ]; then
    REPLY="Skip"
   else
-   REPLY="`cat $TMP/reply`"
+   REPLY="$(cat $TMP/reply)"
   fi
   rm -r $TMP/reply
   if [ "$REPLY" = "Begin" ]; then
@@ -807,7 +789,7 @@ Which option would you like?"`" 21 80 8 \
     HDR="no"
     continue;
    else
-    APPEND="quiet `cat $TMP/reply`"
+    APPEND="quiet $(cat $TMP/reply)"
    fi
    UTFVT="vt.default_utf8=1"
    use_framebuffer;
@@ -827,15 +809,15 @@ selection.  Please pick a target location:"`" 15 80 3 \
     continue;
    else
     LNX="no"
-    TG="`cat $TMP/reply`"
+    TG="$(cat $TMP/reply)"
    fi
    rm -r $TMP/reply
    if [ "$TG" = "MBR" ]; then
     MBR_TARGET=/dev/sda
     echo $MBR_TARGET > $TMP/LILOMBR
     cat /proc/partitions | while read LINE ; do
-     MAJOR="`echo $LINE | cut -f 1 -d ' '`"
-     MINOR="`echo $LINE | cut -f 2 -d ' '`"
+     MAJOR="$(echo $LINE | cut -f 1 -d ' ')"
+     MINOR="$(echo $LINE | cut -f 2 -d ' ')"
      if [ ! "$MINOR" = "0" -a ! "$MINOR" = "64" ]; then # ignore whole devices to weed out CD drives
       if [ "$MAJOR" = "3" ]; then
        MBR_TARGET=/dev/hda
@@ -850,15 +832,21 @@ selection.  Please pick a target location:"`" 15 80 3 \
        MBR_TARGET=/dev/hdg
        echo $MBR_TARGET > $TMP/LILOMBR
       fi
+      if dmidecode 2> /dev/null | grep -q QEMU 2> /dev/null ; then
+       if [ -r /dev/vda ]; then
+         MBR_TARGET=/dev/vda
+         echo $MBR_TARGET > $TMP/LILOMBR
+       fi
+      fi
      fi
     done
-    LILO_TARGET=`cat $TMP/LILOMBR`
+    LILO_TARGET=$(cat $TMP/LILOMBR)
     dialog --title "`gettext "CONFIRM LOCATION TO INSTALL LILO"`" --inputbox \
 "`gettext "The auto-detected location to install the LILO boot block is shown below.  \
 If you need to make any changes, you can make them below.  Otherwise, hit \
 ENTER to accept the target location shown."`" 11 80 $LILO_TARGET 2> $TMP/reply
     if [ $? = 0 ]; then
-      LILO_TARGET="`cat $TMP/reply`"
+      LILO_TARGET="$(cat $TMP/reply)"
     fi
     rm -f $TMP/reply
    elif [ "$TG" = "Root" ]; then
@@ -881,7 +869,7 @@ default."`" 13 80 4 \
     HDR="no"
     continue;
    else
-    TIMEOUT="`cat $TMP/reply`"
+    TIMEOUT="$(cat $TMP/reply)"
    fi
    rm -r $TMP/reply
    if [ "$TIMEOUT" = "None" ]; then 
@@ -907,6 +895,7 @@ default."`" 13 80 4 \
 # Start LILO global section
 boot = $LILO_TARGET
 
+# This option loads the kernel and initrd much faster:
 compact
 
 EOF
@@ -929,9 +918,12 @@ message = /boot/boot_message.txt
 
 EOF
    fi
-   if [ ! "$APPEND" = "" -o ! "$UTFVT" = "" ]; then
+   #if [ ! "$APPEND" = "" -o ! "$UTFVT" = "" ]; then
      echo "# Append any additional kernel parameters:" >> $TMP/lilo.conf
      echo "append=\"$APPEND $UTFVT\"" >> $TMP/lilo.conf
+   #fi
+   if echo $LILO_TARGET | grep -q vda 2>/dev/null ; then
+    echo "disk = /dev/vda bios=0x80 max-partitions=7" >> $TMP/lilo.conf
    fi
    cat << EOF >> $TMP/lilo.conf
 $PROMPT
@@ -992,6 +984,8 @@ EOF
 EOF
     HDR="yes"
   elif [ "$REPLY" = "Linux" ]; then
+   dialog --infobox "\n`eval_gettext "Scanning for Linux partitions..."`" 0 0
+   sleep 1
    if [ "$HDR" = "yes" ]; then
     if [ "$ROOT_DEVICE" != "" ]; then
      DEFROOT="--default-item $ROOT_DEVICE"
@@ -1016,7 +1010,7 @@ EOF
      continue
     fi
     rm $TMP/tmpmsg
-    LINUX_PART="`cat $TMP/reply`"
+    LINUX_PART="$(cat $TMP/reply)"
     checkp_dialog $LINUX_PART
     if [ ! $? = 0 ]; then
      continue;
@@ -1029,7 +1023,7 @@ SINGLE WORD."`" 11 80 2> $TMP/reply
     if [ $? = 1 -o $? = 255 ]; then
      continue
     fi
-    LABEL="`cat $TMP/reply`"
+    LABEL="$(cat $TMP/reply)"
     cat << EOF >> $TMP/lilo.conf
 # Linux bootable partition config begins
 image = $KERNEL
@@ -1059,13 +1053,13 @@ as such if you install them using this menu." > $TMP/tmpmsg
     gettext "Which one would you like LILO to boot?" >> $TMP/tmpmsg
     echo >> $TMP/tmpmsg
     dialog --title "`gettext "SELECT OS/2 PARTITION"`" --no-collapse --inputbox \
-"`cat $TMP/tmpmsg`" 20 80 2> $TMP/reply
+"$(cat $TMP/tmpmsg)" 20 80 2> $TMP/reply
     if [ $? = 1 -o $? = 255 ]; then
      rm $TMP/tmpmsg
      continue
     fi
     rm $TMP/tmpmsg
-    OS_2_PART="`cat $TMP/reply`"
+    OS_2_PART="$(cat $TMP/reply)"
     checkp_dialog $OS_2_PART
     if [ ! $? = 0 ]; then
      continue;
@@ -1078,9 +1072,9 @@ SINGLE WORD."`" 11 80 2> $TMP/reply
     if [ $? = 1 -o $? = 255 ]; then
      continue
     fi
-    LABEL="`cat $TMP/reply`"
-    TABLE="`echo $OS_2_PART | cut -b1-8`"
-    if [ "`echo $TABLE | cut -b6-8`" = "hda" ]; then
+    LABEL="$(cat $TMP/reply)"
+    TABLE="$(echo $OS_2_PART | cut -b1-8)"
+    if [ "$(echo $TABLE | cut -b6-8)" = "hda" ]; then
      cat << EOF >> $TMP/lilo.conf
 # OS/2 bootable partition config begins
 other = $OS_2_PART
@@ -1109,6 +1103,8 @@ partitions unless you start over with a new LILO header."`" 6 80
    fi
    LNX="yes"
   elif [ "$REPLY" = "Windows" ]; then
+   dialog --infobox "\n`eval_gettext "Scanning for Windows partitions..."`" 0 0
+   sleep 1
    if [ "$HDR" = "yes" ]; then
     gettext "These are possibly Windows or DOS partitions. They will be treated
 as such if you install them using this menu." > $TMP/tmpmsg
@@ -1120,18 +1116,18 @@ Win
 W95
 FAT12
 FAT16
-HPFS" | grep -v "Ext'd" | grep -v "Extend" | sort | grep "$($OSPROBER 2> /dev/null | grep Windows | cut -f 1 -d :)" >> $TMP/tmpmsg
+HPFS" | grep -v "Ext'd" | grep -v "Extend" | sort | grep "$($OSPROBER 2> /dev/null | grep :Windows: | cut -f 1 -d :)" >> $TMP/tmpmsg
     echo >> $TMP/tmpmsg
     gettext "Which one would you like LILO to boot?" >> $TMP/tmpmsg
     echo >> $TMP/tmpmsg
     dialog --title "`gettext "SELECT WINDOWS PARTITION"`" --no-collapse --inputbox \
-"`cat $TMP/tmpmsg`" 20 80 2> $TMP/reply
+"$(cat $TMP/tmpmsg)" 20 80 2> $TMP/reply
     if [ $? = 1 -o $? = 255 ]; then
      rm $TMP/tmpmsg
      continue
     fi
     rm $TMP/tmpmsg
-    DOSPART="`cat $TMP/reply`"
+    DOSPART="$(cat $TMP/reply)"
     checkp_dialog $DOSPART
     if [ ! $? = 0 ]; then
      continue;
@@ -1144,13 +1140,13 @@ SINGLE WORD."`" 11 80 2> $TMP/reply
     if [ $? = 1 -o $? = 255 ]; then
      continue
     fi
-    LABEL="`cat $TMP/reply`"
+    LABEL="$(cat $TMP/reply)"
     unset USE_LOADER
-    TABLE="`echo $DOSPART | cut -b1-8`"
-    if [ "`echo $TABLE | cut -b6-8`" = "hda" ]; then
+    TABLE="$(echo $DOSPART | cut -b1-8)"
+    if [ "$(echo $TABLE | cut -b6-8)" = "hda" ]; then
      USE_LOADER="no"
     fi
-    if [ "`echo $TABLE | cut -b6-8`" = "sda" ]; then
+    if [ "$(echo $TABLE | cut -b6-8)" = "sda" ]; then
      if probe /dev/hda; then
       USE_LOADER="yes"
      else
@@ -1216,8 +1212,8 @@ configuration file, it could not be found. Try making a new one."`" 9 80
    if [ -r $TMP/lilo.conf ]; then
     dialog --title "`gettext "YOUR NEW /etc/lilo.conf"`" --textbox "$TMP/lilo.conf" 22 80
    else
-    if [ -r /mnt/etc/lilo.conf ]; then
-     dialog --title "`gettext "YOUR OLD /etc/lilo.conf"`" --textbox "/mnt/etc/lilo.conf" 22 80
+    if [ -r $T_PX/etc/lilo.conf ]; then
+     dialog --title "`gettext "YOUR OLD /etc/lilo.conf"`" --textbox "$T_PX/etc/lilo.conf" 22 80
     elif [ "$T_PX" = "/" -a -r /etc/lilo.conf ]; then
      dialog --title "`gettext "YOUR OLD /etc/lilo.conf"`" --textbox "/etc/lilo.conf" 22 80
     else
