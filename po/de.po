@@ -6,7 +6,7 @@
 # Christian Ruesch <cr@rt.fm>, 2013,2016
 # Didier Spaier <didier@slint.fr>, 2014
 # franzen <salix@schoepfer.info>, 2013
-# Joachim Braun <jo.braun@freenet.de>, 2016
+# Joachim Braun <joachim.braun@mail.ru>, 2016
 # Maik Wagner <maikwagner@yahoo.com>, 2013
 # Marcel Saegebarth <marc@mos6581.de>, 2013
 # Marek Srejma (Sam) <sam@manjaro.org>, 2014
@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 23:17+0200\n"
-"PO-Revision-Date: 2016-07-13 16:52+0000\n"
-"Last-Translator: Joachim Braun <jo.braun@freenet.de>\n"
+"POT-Creation-Date: 2022-02-08 14:36+0200\n"
+"PO-Revision-Date: 2022-02-08 12:36+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/gapan/salix/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,15 +26,15 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/liloconfig:47
+#: src/liloconfig:77
 msgid "UEFI FIRMWARE DETECTED"
 msgstr "UEFI FIRMWARE ENTDECKT"
 
-#: src/liloconfig:48
+#: src/liloconfig:78
 msgid "LILO (Linux Loader) installation"
 msgstr "LILO (Linux Loader) Installation"
 
-#: src/liloconfig:50
+#: src/liloconfig:80
 msgid ""
 "Since LILO (the traditional Linux Loader) does not work with machines "
 "running UEFI firmware (except in Legacy BIOS mode), you probably do not need"
@@ -42,29 +42,29 @@ msgid ""
 "designed to work with EFI/UEFI systems."
 msgstr "Da LILO (der traditionelle Linux Loader) nicht mit Rechnern funktioniert, die mit UEFI Firmware arbeiten (außer im Legacy BIOS Modus), müssen Sie diesen wahrscheinlich nicht installieren. Stattdessen verwenden Sie ELILO. Dies ist eine Version von LILO, die für EFI/UEFI Systeme entworfen wurde."
 
-#: src/liloconfig:55
+#: src/liloconfig:85
 msgid "Skip installing LILO and proceed to ELILO installation"
 msgstr "Installation von LILO überspringen und mit ELILO Installation fortfahren"
 
-#: src/liloconfig:56
+#: src/liloconfig:86
 msgid "Install LILO anyway"
 msgstr "LILO trotzdem installieren"
 
-#: src/liloconfig:155
+#: src/liloconfig:138
 msgid "OPTIONAL SALIX LOGO BOOT SCREEN"
 msgstr "OPTIONALES STARTBILDSCHIRM-LOGO FÜR SALIX"
 
-#: src/liloconfig:157
+#: src/liloconfig:140
 msgid ""
 "Would you like to use a boot screen with the Salix logo against a black "
 "background?  If you answer no here, the standard LILO menu will be used.\n"
 msgstr "Möchten Sie einen Startbildschirm mit dem Salix-Logo auf einem schwarzen Hintergrund nutzen? Wenn Sie hier nein antworten, wird das Standard LILO Menü verwendet.\n"
 
-#: src/liloconfig:187
+#: src/liloconfig:170
 msgid "CONFIGURE LILO TO USE FRAME BUFFER CONSOLE?"
 msgstr "KONFIGURIERE LILO, UM EINE BILDSPEICHERKONSOLE (FRAMEBUFFER) ZU VERWENDEN?"
 
-#: src/liloconfig:189
+#: src/liloconfig:172
 msgid ""
 "Looking at /proc/devices, it seems your kernel has support for the Linux "
 "frame buffer console.  If we enable this in /etc/lilo.conf, it will allow "
@@ -75,35 +75,35 @@ msgid ""
 "console, or the standard Linux console?"
 msgstr "Die Eintäge in /proc/devices weisen darauf hin, dass Ihr Kernel die Linux Framebufferkonsole unterstützt. Wenn Sie diese in /etc/lilo.conf aktivieren, wird Ihr Bildschirm mehr Zeilen und Spalten anzeigen können, und Sie sehen während des Bootvorganges ein cooles Pinguinlogo. Andererseits ist die Framebufferkonsole aber langsamer als die Standard-Textkonsole, und nicht alle Grafikkarten bzw. Monitore unterstützen die entsprechenden Videomodi. Möchten Sie die Framebufferkonsole oder die Standard-Textkonsole verwenden?"
 
-#: src/liloconfig:196
+#: src/liloconfig:179
 msgid "Use the standard Linux console (the safe choice)"
 msgstr "Die Standard-Linux-Konsole verwenden (die sichere Wahl)"
 
-#: src/liloconfig:197
+#: src/liloconfig:180
 msgid "Frame buffer console, 640x480x64k"
 msgstr "Grafische Konsole, 640x480x64k"
 
-#: src/liloconfig:198
+#: src/liloconfig:181
 msgid "Frame buffer console, 800x600x64k"
 msgstr "Grafische Konsole, 800x600x64k"
 
-#: src/liloconfig:199
+#: src/liloconfig:182
 msgid "Frame buffer console, 1024x768x64k"
 msgstr "Grafische Konsole, 1024x768x64k"
 
-#: src/liloconfig:200
+#: src/liloconfig:183
 msgid "Frame buffer console, 1280x1024x64k"
 msgstr "Framebufferkonsole 1280x1024x64k"
 
-#: src/liloconfig:201
+#: src/liloconfig:184
 msgid "Frame buffer console, 1600x1200x64k"
 msgstr "Framebufferkonsole 1600x1200x64k"
 
-#: src/liloconfig:268
+#: src/liloconfig:251
 msgid "OPTIONAL LILO append="
 msgstr "Optionaler LILO-Parameter append="
 
-#: src/liloconfig:269
+#: src/liloconfig:252
 msgid ""
 "Some systems might require extra parameters to be passed to the kernel. If "
 "you needed to pass parameters to the kernel when you booted the Salix "
@@ -114,11 +114,11 @@ msgid ""
 "to continue."
 msgstr "Einige Konfigurationen benötigen für einen reibungslosen Systemstart zusätzliche Kernelparameter. Wenn beim Starten vom Salix Bootmedium die Eingabe zusätzlicher Parameter erforderlich war, könnte es empfehlenswert sein, diese hier anzugeben. Die meisten Systeme benötigen jedoch keine zusätzlichen Parameter. Wenn Sie Hibernation nutzen möchten, geben Sie hier bitte eine 'resume' Option für Ihre Swap-Partition an, z.B. 'resume=/dev/sda3', wenn Ihre Swap-Partition auf /dev/sda3 liegt. Falls Sie keine zusätzlichen Parameter benötigen, drücken Sie einfach ENTER um fortzufahren."
 
-#: src/liloconfig:296
+#: src/liloconfig:279
 msgid "OS/2 BOOT MANAGER FOUND"
 msgstr "OS/2 BOOT MANAGER GEFUNDEN"
 
-#: src/liloconfig:297
+#: src/liloconfig:280
 msgid ""
 "Your system appears to have Boot Manager, a boot menu system provided with "
 "OS/2 and Partition Magic.  If you like, we can install a very simple LILO "
@@ -128,12 +128,12 @@ msgid ""
 "way?"
 msgstr "Ihr System scheint \"Boot Manager\" zu haben, ein Bootmenüsystem, welches mit OS/2 und \"Partition Magic\" installiert wird. Wenn Sie es wünschen, können wir einen sehr einfachen LILO-Bootblock an den Anfang Ihrer Linuxpartition setzen. Dann können Sie die Partition im Menü von \"Boot Manager\" hinzufügen und Sie werden in der Lage sein, mit \"Boot Manager\" Linux zu starten. Möchten Sie LILO auf eine mit \"Boot Manager\" kompatible Art installieren?"
 
-#: src/liloconfig:351
+#: src/liloconfig:334
 #, sh-format
 msgid "SELECT LILO DESTINATION"
 msgstr "WÄHLEN DES ZIELS FÜR LILO"
 
-#: src/liloconfig:352
+#: src/liloconfig:335
 msgid ""
 "LILO can be installed to a variety of places:\n"
 "\n"
@@ -144,43 +144,47 @@ msgid ""
 "Options 1 and 2 are the safest, but option 1 does require a little extra work later (setting the partition bootable with fdisk). Which option would you like?"
 msgstr "LILO kann an einer Vielzahl von Orten installiert werden:\n\n  1. Der Superblock Ihrer Root-Partition. (welche die bootfähige \n     Partition mit Windows oder Linux fdisk gemacht wird, oder\n     mit einem Programm wie OS/2 Boot Manager gestartet wird)\n\n  2. Eine formatierte Diskette.\n\n  3. Der Master Boot Record Ihrer ersten Festplatte.\n\nDie Optionen 1 und 2 sind die sichersten, aber Option 1 benötigt später etwas mehr Arbeit (mit fdisk die Bootmarkierung für die Partition setzen).\nWelche Option wünschen Sie?"
 
-#: src/liloconfig:364 src/liloconfig:817
+#: src/liloconfig:347 src/liloconfig:803
 msgid "Install to superblock (not for use with XFS)"
 msgstr "Im Superblock installieren (nicht mit XFS verwenden)"
 
-#: src/liloconfig:365
+#: src/liloconfig:348
 msgid "Install to a formatted floppy in /dev/fd0 (A:)"
 msgstr "Auf eine formatierte Diskette in /dev/fd0 (A:) installieren"
 
-#: src/liloconfig:366
+#: src/liloconfig:349
 msgid "Install to Master Boot Record"
 msgstr "In den Master Boot Record installieren"
 
-#: src/liloconfig:576
+#: src/liloconfig:356
+msgid "Scanning partitions and generating /etc/lilo.conf..."
+msgstr ""
+
+#: src/liloconfig:577
 #, sh-format
 msgid "I can't find a device named $ArG1 !"
 msgstr "Ich kann kein Gerät mit dem Namen $ArG1 finden!"
 
-#: src/liloconfig:580
+#: src/liloconfig:581
 msgid "Are you sure you want to use this device name "
 msgstr "Sind Sie sicher, dass Sie diesen Gerätenamen verwenden möchten"
 
-#: src/liloconfig:594
+#: src/liloconfig:595
 msgid "DEVICE FILE NOT FOUND"
 msgstr "GERÄTE-DATEI NICHT GEFUNDEN"
 
-#: src/liloconfig:594
+#: src/liloconfig:595
 #, sh-format
 msgid ""
 "I can't find a device named $ArG1. Are you sure you want to use this device "
 "name?"
 msgstr "Ich kann kein Gerät namens $ArG1 finden. Sind Sie sicher, dass Sie diesen Gerätenamen verwenden möchten?"
 
-#: src/liloconfig:604
+#: src/liloconfig:605
 msgid "Installing the Linux Loader..."
 msgstr "Installiere den Linux-Loader..."
 
-#: src/liloconfig:631
+#: src/liloconfig:632
 #, sh-format
 msgid ""
 "Sorry, but the attempt to install LILO has returned an error, so LILO has "
@@ -191,7 +195,7 @@ msgid ""
 "seen above."
 msgstr "Entschuldigung, aber beim Versuch, LILO zu installieren, gab es Fehler. Somit wurde LILO nicht korrekt installiert. Sie werden stattdessen eine Bootdisk verwenden müssen um Ihren Rechner zu starten. Es sollte immer noch möglich sein, LILO zum Laufen zu bringen, indem die /etc/lilo.conf editiert wird und LILO erneut manuell installiert wird. Für weitere Hilfe lesen Sie die LILO-Manpage (Handbuchseite, Befehl: \"man lilo\") und die Dokumentation in $LILODOCDIR. Die Fehlermeldung kann oben gesehen werden."
 
-#: src/liloconfig:671
+#: src/liloconfig:672
 #, sh-format
 msgid ""
 "LILO INSTALL ERROR # $SUCCESS\n"
@@ -199,24 +203,11 @@ msgid ""
 "Sorry, but the attempt to install LILO has returned an error, so LILO has not been correctly installed.  You'll have to use a bootdisk to start your machine instead.  It should still be possible to get LILO working by editing the /etc/lilo.conf and reinstalling LILO manually. See the LILO man page and documentation in $LILODOCDIR for more help."
 msgstr "LILO-INSTALLATIONSFEHLER # $SUCCESS\n\nEntschuldigung, aber der Vorgang, LILO zu installieren, gab einen Fehler zurück. Somit wurde LILO nicht korrekt installiert. Sie werden stattdessen eine Bootdisk verwenden müssen um Ihren Rechner zu starten. Es sollte immer noch möglich sein, LILO zum Arbeiten zu bringen, indem die /etc/lilo.conf editiert wird und LILO manuell wieder installiert wird. Konsultieren Sie die LILO-Manpage (Handbuchseite, Befehl: \"man lilo\") und Dokumentation in $LILODOCDIR für weitere Hilfe."
 
-#: src/liloconfig:733
-msgid "SKIP LILO CONFIGURATION? (RECOMMENDED)"
-msgstr "ÜBERSPRINGEN DER LILO-KONFIGURATION? (EMPFOHLEN)"
-
-#: src/liloconfig:734
-msgid ""
-"Since you are installing to a FAT partition, it's suggested that you do not "
-"configure LILO at this time.  (Instead, use your bootdisk.  For booting off "
-"the hard drive from MS-DOS, you can use Loadlin.  You'll find Loadlin on "
-"your hard drive in \\LINUX\\ROOT) Skip LILO configuration (highly "
-"recommended)?"
-msgstr "Da Sie auf eine FAT-Partition installieren, wird vorgeschlagen, dass Sie LILO noch nicht konfigurieren. (Nehmen Sie stattdessen Ihre Bootdisk. Zum booten von der Festplatte von MS-DOS können Sie Loadlin verwenden. Sie werden Loadlin auf Ihrer Festplatte in \\LINUX\\ROOT finden) LILO Konfiguration überspringen (sehr empfehlenswert)?"
-
-#: src/liloconfig:750
+#: src/liloconfig:736
 msgid "INSTALL LILO"
 msgstr "LILO INSTALLIEREN"
 
-#: src/liloconfig:751
+#: src/liloconfig:737
 msgid ""
 "LILO (Linux Loader) is a generic boot loader.  There's a simple installation"
 " which tries to automatically set up LILO to boot Linux (also Windows if "
@@ -227,23 +218,23 @@ msgid ""
 " later with the 'liloconfig' command.  Which option would you like?"
 msgstr "LILO (Linux Loader) ist ein generischer Bootloader. Es ermöglicht eine einfache Installation, welche versucht, LILO automatisch einzurichten, Linux zu laden (auch Windows, falls gefunden). Für fortgeschrittene Benutzer bietet die Expertenoption mehr Kontrolle über den Installationsprozess. Da LILO nicht in allen Fällen arbeitet (und Partitionen beschädigen kann, falls es falsch installiert wird), gibt es die dritte (sichere) Option, die Installation für LILO momentan zu überspringen. Sie können es immer später mit dem Befehl 'liloconfig' installieren. Welche Option möchten Sie auswählen?"
 
-#: src/liloconfig:760
+#: src/liloconfig:746
 msgid "Try to install LILO automatically"
 msgstr "Versuchen, LILO automatisch zu installieren"
 
-#: src/liloconfig:761
+#: src/liloconfig:747
 msgid "Use expert lilo.conf setup menu"
 msgstr "Das lilo.conf Experten-Setupmenü verwenden"
 
-#: src/liloconfig:762
+#: src/liloconfig:748
 msgid "Do not install LILO"
 msgstr "LILO nicht installieren"
 
-#: src/liloconfig:777
+#: src/liloconfig:763
 msgid "EXPERT LILO INSTALLATION"
 msgstr "LILO EXPERTENINSTALLATION"
 
-#: src/liloconfig:778
+#: src/liloconfig:764
 msgid ""
 "This menu directs the creation of the LILO config file, lilo.conf. To "
 "install, you make a new LILO configuration file by creating a new header and"
@@ -253,44 +244,44 @@ msgid ""
 "can always start over by choosing 'Begin'. Which option would you like?"
 msgstr "Dieses Menü steuert die Erstellung der LILO-Konfigurationsdatei, lilo.conf. Um zu installieren, erstellen Sie eine neue LILO-Konfigurationsdatei, indem ein neuer Header erstellt wird und dann eine oder mehrere bootfähige Partitionen zu dieser Datei hinzugefügt werden. Alternativ, wenn Sie bereits eine /etc/lilo.conf haben, können Sie damit wieder installieren. Wenn Sie einen Fehler machen, können Sie immer neu starten indem 'Beginnen' gewählt wird. Welche Option möchten Sie auswählen?"
 
-#: src/liloconfig:785
+#: src/liloconfig:771
 msgid "Start LILO configuration with a new LILO header"
 msgstr "Starten der LILO-Konfiguration mit einem neuen LILO-Header"
 
-#: src/liloconfig:786
+#: src/liloconfig:772
 msgid "Add a Linux partition to the LILO config"
 msgstr "Eine Linux Partition zur LILO-Konfiguration hinzufügen"
 
-#: src/liloconfig:787
+#: src/liloconfig:773
 msgid "Add a Windows FAT or NTFS partition to the LILO config"
 msgstr "Eine Windows-FAT- oder -NTFS-Partition zur LILO-Konfiguration hinzufügen"
 
-#: src/liloconfig:788
+#: src/liloconfig:774
 msgid "Install LILO"
 msgstr "LILO installieren"
 
-#: src/liloconfig:789
+#: src/liloconfig:775
 msgid "Reinstall LILO using the existing lilo.conf"
 msgstr "Neuinstallation von LILO mit der bestehenden lilo.conf"
 
-#: src/liloconfig:790
+#: src/liloconfig:776
 msgid "Skip LILO installation and exit this menu"
 msgstr "Die LILO Installation überspringen und dieses Menü verlassen"
 
-#: src/liloconfig:791
+#: src/liloconfig:777
 msgid "View your current /etc/lilo.conf"
 msgstr "Betrachten der aktuellen /etc/lilo.conf"
 
-#: src/liloconfig:792
+#: src/liloconfig:778
 msgid "Read the Linux Loader HELP file"
 msgstr "Lesen der Hilfedatei zu LILO"
 
-#: src/liloconfig:810
+#: src/liloconfig:796
 #, sh-format
 msgid "SELECT LILO TARGET LOCATION"
 msgstr "WÄHLE ZIELORT FÜR LILO"
 
-#: src/liloconfig:810
+#: src/liloconfig:796
 msgid ""
 "LILO can be installed to a variety of places:  the superblock of your root "
 "Linux partition (which could then be made the bootable partition with "
@@ -299,105 +290,115 @@ msgid ""
 "use the Root selection.  Please pick a target location:"
 msgstr "LILO kann in einer Vielzahl von Orten installiert werden: den Superblock Ihrer Root Linux Partition (welche dann die bootfähige Partition mit fdisk gemacht werden könnte), eine formatierte Diskette, oder den Master Boot Record auf Ihrer ersten Festplatte. Wenn Sie ein Bootsystem wie beispielsweise \"Boot Manager\" verwenden, sollten Sie die Auswahl Root treffen. Bitte wählen Sie einen Zielort:"
 
-#: src/liloconfig:818
+#: src/liloconfig:804
 msgid "Use a formatted floppy disk in the boot drive"
 msgstr "Verwende eine formatierte Diskette im Startlaufwerk"
 
-#: src/liloconfig:819
+#: src/liloconfig:805
 msgid "Use the Master Boot Record (possibly unsafe)"
 msgstr "Verwende den Master Boot Record (könnte unsicher sein)"
 
-#: src/liloconfig:852
+#: src/liloconfig:844
 msgid "CONFIRM LOCATION TO INSTALL LILO"
 msgstr "ORT BESTÄTIGEN, AN DEM LILO INSTALLIERT WIRD"
 
-#: src/liloconfig:853
+#: src/liloconfig:845
 msgid ""
 "The auto-detected location to install the LILO boot block is shown below.  "
 "If you need to make any changes, you can make them below.  Otherwise, hit "
 "ENTER to accept the target location shown."
 msgstr "Der automatisch entdeckte Ort, um den LILO-Bootblock zu installieren, wird unten angezeigt. Wenn Sie einige Änderungen machen wollen, können Sie diese unten stehend machen. Ansonsten drücken Sie ENTER um den gezeigten Zielort zu akzeptieren."
 
-#: src/liloconfig:868
+#: src/liloconfig:860
 msgid "CHOOSE LILO TIMEOUT"
 msgstr "WARTEZEIT FÜR LILO WÄHLEN"
 
-#: src/liloconfig:868
+#: src/liloconfig:860
 msgid ""
 "At boot time, how long would you like LILO to wait for you to select an "
 "operating system?  If you let LILO time out, it will boot the first OS in "
 "the configuration file by default."
 msgstr "Wie lange soll LILO warten, bis Sie ein Betriebssystem ausgewählt haben? Sobald die Zeit abgelaufen ist, startet LILO automatisch das erste Betriebssystem in der LILO-Konfigurationsdatei."
 
-#: src/liloconfig:872
+#: src/liloconfig:864
 msgid "Don't wait at all - boot straight into the first OS"
 msgstr "Nicht warten - das erste Betriebssystem direkt starten"
 
-#: src/liloconfig:873
+#: src/liloconfig:865
 msgid "5 seconds"
 msgstr "5 Sekunden"
 
-#: src/liloconfig:874
+#: src/liloconfig:866
 msgid "30 seconds"
 msgstr "30 Sekunden"
 
-#: src/liloconfig:875
+#: src/liloconfig:867
 msgid "Present a prompt and wait until a choice is made"
 msgstr "Eingabeaufforderung anzeigen und warten, bis eine Wahl getroffen wurde"
 
-#: src/liloconfig:996
+#: src/liloconfig:987
+#, sh-format
+msgid "Scanning for Linux partitions..."
+msgstr ""
+
+#: src/liloconfig:994
 #, sh-format
 msgid "SELECT LINUX PARTITION $DEFROOT"
 msgstr "LINUX PARTITION $DEFROOT AUSWÄHLEN"
 
-#: src/liloconfig:998
+#: src/liloconfig:996
 msgid "Which Linux partition would you like LILO to boot?"
 msgstr "Welche Linux Partition soll LILO starten?"
 
-#: src/liloconfig:1020
+#: src/liloconfig:1018
 #, sh-format
 msgid "SELECT PARTITION NAME FOR $LINUX_PART"
 msgstr " NAMEN FÜR DIE PARTITION $LINUX_PART AUSWÄHLEN"
 
-#: src/liloconfig:1021
+#: src/liloconfig:1019
 msgid ""
 "Now you must select a short, unique name for this partition. You'll use this"
 " name if you specify a partition to boot at the LILO prompt. 'Linux' might "
 "not be a bad choice. THIS MUST BE A SINGLE WORD."
 msgstr "Nun müssen Sie einen kurzen, eindeutigen Namen für diese Partition wählen. Diesen Namen benötigen Sie, falls Sie in der LILO-Eingabeaufforderung eine Partition zum starten angeben. 'Linux' ist keine schlechte Wahl. ES MUSS EIN EINZIGES WORT SEIN."
 
-#: src/liloconfig:1047
+#: src/liloconfig:1045
 msgid ""
 "These are possibly OS/2 partitions. They will be treated as such if you "
 "install them using this menu."
 msgstr "Dies sind möglicherweise OS/2-Partitionen und werden als solche behandelt, wenn die Partitionen über dieses Menü installiert werden."
 
-#: src/liloconfig:1055 src/liloconfig:1121
+#: src/liloconfig:1053 src/liloconfig:1121
 msgid "Which one would you like LILO to boot?"
 msgstr "Welche soll LILO zum booten starten?"
 
-#: src/liloconfig:1057
+#: src/liloconfig:1055
 msgid "SELECT OS/2 PARTITION"
 msgstr "OS/2-PARTITION AUSWÄHLEN"
 
-#: src/liloconfig:1069 src/liloconfig:1135
+#: src/liloconfig:1067 src/liloconfig:1135
 msgid "SELECT PARTITION NAME"
 msgstr "NAMEN FÜR DIE PARTITION BESTIMMEN"
 
-#: src/liloconfig:1070
+#: src/liloconfig:1068
 msgid ""
 "Now you must select a short, unique name for this partition. You'll use this"
 " name if you specify a partition to boot at the LILO prompt. 'OS/2' might "
 "not be a bad choice. THIS MUST BE A SINGLE WORD."
 msgstr "Nun müssen Sie einen kurzen, einmaligen Name für diese Partition bestimmen. Sie werden diesen Namen nutzen, wenn Sie eine zu startende Partition an der LILO-Eingabeaufforderung angeben.\n'OS/2' ist vielleicht keine schlechte Wahl. DIES MUSS EIN EINZELNES WORT SEIN."
 
-#: src/liloconfig:1102
+#: src/liloconfig:1100
 msgid "CAN'T ADD OS/2 PARTITION"
 msgstr "KANN OS/2-PARTITION NICHT HINZUFÜGEN"
 
-#: src/liloconfig:1102 src/liloconfig:1178
+#: src/liloconfig:1100 src/liloconfig:1178
 msgid "You can't add partitions unless you start over with a new LILO header."
 msgstr "Sie können keine Partitionen hinzufügen, ausser Sie starten mit einem neuen LILO-Header."
+
+#: src/liloconfig:1106
+#, sh-format
+msgid "Scanning for Windows partitions..."
+msgstr ""
 
 #: src/liloconfig:1109
 msgid ""
