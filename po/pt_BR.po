@@ -13,14 +13,14 @@
 # 015e61dff5bb93762ee46b67d8d69572_ba52f16 <b7ada2c91ee78f733e13d7146e75ae38_130524>, 2014
 # Marcelo Pio de Castro <belfalas.vinyamar@gmail.com>, 2013
 # Thaigo Rocco <thiagomt.rocco@gmail.com>, 2013,2016
-# The Cat, 2020
+# The Cat, 2020,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 14:36+0200\n"
-"PO-Revision-Date: 2022-02-08 12:36+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 21:20+0000\n"
+"Last-Translator: The Cat, 2020,2022\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/gapan/salix/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -160,7 +160,7 @@ msgstr "Instalar no Master Boot Record"
 
 #: src/liloconfig:356
 msgid "Scanning partitions and generating /etc/lilo.conf..."
-msgstr ""
+msgstr "Escaneando partições e gerando /etc/lilo.conf..."
 
 #: src/liloconfig:577
 #, sh-format
@@ -341,7 +341,7 @@ msgstr "Mostrar um prompt e esperar até que uma escolha seja feita"
 #: src/liloconfig:987
 #, sh-format
 msgid "Scanning for Linux partitions..."
-msgstr ""
+msgstr "Procurando partições Linux..."
 
 #: src/liloconfig:994
 #, sh-format
@@ -400,7 +400,7 @@ msgstr "Você não pode incluir partições a não ser que recomece com um novo 
 #: src/liloconfig:1106
 #, sh-format
 msgid "Scanning for Windows partitions..."
-msgstr ""
+msgstr "Procurando partições Windows..."
 
 #: src/liloconfig:1109
 msgid ""

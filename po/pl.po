@@ -8,14 +8,16 @@
 # elesmod <elesmod@lavabit.com>, 2013
 # Karol Chmurzyński <chmuri@gmail.com>, 2017
 # Mherda <mherda@slackword.net>, 2013
+# Mherda <mherda@slackword.net>, 2013
+# pjm, 2013,2016
 # pjm, 2013,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 14:36+0200\n"
-"PO-Revision-Date: 2022-02-08 12:36+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 21:20+0000\n"
+"Last-Translator: pjm, 2013,2016\n"
 "Language-Team: Polish (http://www.transifex.com/gapan/salix/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -155,7 +157,7 @@ msgstr "Zainstaluj na głównym rekordzie startowym (MBR)"
 
 #: src/liloconfig:356
 msgid "Scanning partitions and generating /etc/lilo.conf..."
-msgstr ""
+msgstr "Skanuję partycje i tworzę plik /etc/lilo.conf..."
 
 #: src/liloconfig:577
 #, sh-format
@@ -336,7 +338,7 @@ msgstr "Wyświetl znak gotowości i oczekuj na wybór"
 #: src/liloconfig:987
 #, sh-format
 msgid "Scanning for Linux partitions..."
-msgstr ""
+msgstr "Skanuję w poszukiwaniu partycji Linuksa..."
 
 #: src/liloconfig:994
 #, sh-format
@@ -357,7 +359,7 @@ msgid ""
 "Now you must select a short, unique name for this partition. You'll use this"
 " name if you specify a partition to boot at the LILO prompt. 'Linux' might "
 "not be a bad choice. THIS MUST BE A SINGLE WORD."
-msgstr "Teraz musisz wybrać krótką oraz unikatową nazwę dla tej partycji. Użyjesz jej w LILO by wskazać partycję do rozruchu. Może to być przykładowo 'Linux'. MUSI TO BYĆ POJEDYŃCZY WYRAZ."
+msgstr "Teraz musisz wybrać krótką oraz unikatową nazwę dla tej partycji. Użyjesz jej w LILO by wskazać partycję do rozruchu. Może to być przykładowo 'Linux'. MUSI TO BYĆ POJEDYNCZY WYRAZ."
 
 #: src/liloconfig:1045
 msgid ""
@@ -382,7 +384,7 @@ msgid ""
 "Now you must select a short, unique name for this partition. You'll use this"
 " name if you specify a partition to boot at the LILO prompt. 'OS/2' might "
 "not be a bad choice. THIS MUST BE A SINGLE WORD."
-msgstr "Teraz musisz wybrać krótką oraz unikatową nazwę dla tej partycji. Użyjesz jej w LILO by wskazać partycję do rozruchu. Może to być przykładowo 'OS/2'. MUSI TO BYĆ POJEDYŃCZY WYRAZ."
+msgstr "Teraz musisz wybrać krótką oraz unikatową nazwę dla tej partycji. Użyjesz jej w LILO by wskazać partycję do rozruchu. Może to być przykładowo 'OS/2'. MUSI TO BYĆ POJEDYNCZY WYRAZ."
 
 #: src/liloconfig:1100
 msgid "CAN'T ADD OS/2 PARTITION"
@@ -395,7 +397,7 @@ msgstr "Aby dodać partycje musisz rozpocząć jeszcze raz z nowym nagłówkiem 
 #: src/liloconfig:1106
 #, sh-format
 msgid "Scanning for Windows partitions..."
-msgstr ""
+msgstr "Skanuję w poszukiwaniu partycji Windows"
 
 #: src/liloconfig:1109
 msgid ""

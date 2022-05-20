@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ingemar Karlsson <ingemar@ingk.se>, 2016,2020
+# Ingemar Karlsson <ingemar@ingk.se>, 2016,2020,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 14:36+0200\n"
-"PO-Revision-Date: 2022-02-08 12:36+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 21:20+0000\n"
+"Last-Translator: Ingemar Karlsson <ingemar@ingk.se>, 2016,2020,2022\n"
 "Language-Team: Swedish (http://www.transifex.com/gapan/salix/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +150,7 @@ msgstr "Installera till Master Boot Record"
 
 #: src/liloconfig:356
 msgid "Scanning partitions and generating /etc/lilo.conf..."
-msgstr ""
+msgstr "Skannar partitioner och genererar /etc/lilo.conf..."
 
 #: src/liloconfig:577
 #, sh-format
@@ -331,7 +331,7 @@ msgstr "Visar en kommandoprompt och vänta tills ett val görs"
 #: src/liloconfig:987
 #, sh-format
 msgid "Scanning for Linux partitions..."
-msgstr ""
+msgstr "Skannar efter Linuxpartitioner..."
 
 #: src/liloconfig:994
 #, sh-format
@@ -390,7 +390,7 @@ msgstr "Du kan inte lägga till partitioner såvida du inte börja om med en ny 
 #: src/liloconfig:1106
 #, sh-format
 msgid "Scanning for Windows partitions..."
-msgstr ""
+msgstr "Skannar efter Windowspartitioner..."
 
 #: src/liloconfig:1109
 msgid ""

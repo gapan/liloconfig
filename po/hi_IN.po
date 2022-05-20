@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Panwar108 <caspian7pena@gmail.com>, 2020-2021
+# Panwar108 <caspian7pena@gmail.com>, 2020-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 14:36+0200\n"
-"PO-Revision-Date: 2022-02-08 12:36+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 21:20+0000\n"
+"Last-Translator: Panwar108 <caspian7pena@gmail.com>, 2020-2022\n"
 "Language-Team: Hindi (India) (http://www.transifex.com/gapan/salix/language/hi_IN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +150,7 @@ msgstr "मास्टर बूट रिकॉर्ड पर इंस्�
 
 #: src/liloconfig:356
 msgid "Scanning partitions and generating /etc/lilo.conf..."
-msgstr ""
+msgstr "विभाजन हेतु स्कैन एवं /etc/lilo.conf सृजन करना जारी..."
 
 #: src/liloconfig:577
 #, sh-format
@@ -331,7 +331,7 @@ msgstr "पुष्टिकरण विंडो दिखाएँ व च�
 #: src/liloconfig:987
 #, sh-format
 msgid "Scanning for Linux partitions..."
-msgstr ""
+msgstr "लिनक्स विभाजन हेतु स्कैन जारी..."
 
 #: src/liloconfig:994
 #, sh-format
@@ -390,7 +390,7 @@ msgstr "एक नवीन लीलो हैडर का सृजन कर
 #: src/liloconfig:1106
 #, sh-format
 msgid "Scanning for Windows partitions..."
-msgstr ""
+msgstr "विंडोज विभाजन हेतु स्कैन जारी..."
 
 #: src/liloconfig:1109
 msgid ""
